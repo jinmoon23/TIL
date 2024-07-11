@@ -13,13 +13,11 @@ def makeHotItem()
 1. **문자열**에 적용하는 *다양한* 문법 ~~아싸~~
 2. 추가적인 마크다운 문법 [마크다운Docs](https://www.markdownguide.org/basic-syntax/)
 <br>
-> 이것은 인용문?!  
+>> 이것은 인용문?!  
 
-아아 이것은 수평선 이라는 것이다.
+아아 이것은 수평선 이라는 것이다.  
 
 ---
-<br>
-
 # CLI(Command Line Interface)
 - cmd 또는 bash를 통해 폴더와 파일을 만들고 접근하는 방법을 배움(**GUI와 비교**하며)
 <br>
