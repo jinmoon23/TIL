@@ -34,7 +34,7 @@ def makeHotItem()
    - `git status`:  .git 파일의 상태를 보여줌
    - `git commit --amend`: 갓! 찍은 커밋의 커밋 **메세지**만 수정할 때 필요한 커맨드. 수정하고 싶은 커밋 이후에 계속 커밋이 쌓인 경우 수정하고 싶었던 커밋의 메세지는 수정이 불가능하다.  
     VIM 에디터 진입 후
-    ![]("240711 git과 markdown/2024-07-11-16-05-44.png") 
+    ![]("240711 git과 markdown/image.png") 
     I를 눌러 Insert Mode 진입
     ![](2024-07-11-16-08-16.png)
     이후 commit 메세지를 수정하고 esc를 눌러 에디터 모드에서 나간 후 `:wq` 로 터미널로 복귀.
