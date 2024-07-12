@@ -2,7 +2,7 @@
 
 ## 첫 번째 실습
    1. 새로운 폴더 생성 후 로컬 저장소 설정
-   ![이미지](https://file.notion.so/f/f/0e6f57f1-72bb-4512-9abe-ab1b43b05d2c/6d4ad117-265f-4583-88a2-3ddab5a93b0a/Untitled.png?id=23482cbd-4656-46d3-8865-6f8654a4407f&table=block&spaceId=0e6f57f1-72bb-4512-9abe-ab1b43b05d2c&expirationTimestamp=1720843200000&signature=dC4bKwfiggZYpJ_rufj9FVm7dll86H37Hn17lpRcoOg&downloadName=Untitled.png)
+      ![이미지](https://file.notion.so/f/f/0e6f57f1-72bb-4512-9abe-ab1b43b05d2c/6d4ad117-265f-4583-88a2-3ddab5a93b0a/Untitled.png?id=23482cbd-4656-46d3-8865-6f8654a4407f&table=block&spaceId=0e6f57f1-72bb-4512-9abe-ab1b43b05d2c&expirationTimestamp=1720843200000&signature=dC4bKwfiggZYpJ_rufj9FVm7dll86H37Hn17lpRcoOg&downloadName=Untitled.png)
    2. commit 목록 생성
 
       ![이미지](https://file.notion.so/f/f/0e6f57f1-72bb-4512-9abe-ab1b43b05d2c/c0f2c829-fca2-4efe-859c-1d1d0cb54dc4/Untitled.png?id=a149dd8f-226d-4ba1-aa10-204c5b457425&table=block&spaceId=0e6f57f1-72bb-4512-9abe-ab1b43b05d2c&expirationTimestamp=1720843200000&signature=w1r6aI8ZSnSQ1bcpiTDNoNL1O2sObN5onoCG7SdNuJ4&downloadName=Untitled.png)
