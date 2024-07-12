@@ -59,6 +59,7 @@ def makeHotItem()
    ![이미지](https://file.notion.so/f/f/0e6f57f1-72bb-4512-9abe-ab1b43b05d2c/6d4ad117-265f-4583-88a2-3ddab5a93b0a/Untitled.png?id=23482cbd-4656-46d3-8865-6f8654a4407f&table=block&spaceId=0e6f57f1-72bb-4512-9abe-ab1b43b05d2c&expirationTimestamp=1720843200000&signature=dC4bKwfiggZYpJ_rufj9FVm7dll86H37Hn17lpRcoOg&downloadName=Untitled.png)
    2. commit 목록 생성
    ![이미지](https://file.notion.so/f/f/0e6f57f1-72bb-4512-9abe-ab1b43b05d2c/c0f2c829-fca2-4efe-859c-1d1d0cb54dc4/Untitled.png?id=a149dd8f-226d-4ba1-aa10-204c5b457425&table=block&spaceId=0e6f57f1-72bb-4512-9abe-ab1b43b05d2c&expirationTimestamp=1720843200000&signature=w1r6aI8ZSnSQ1bcpiTDNoNL1O2sObN5onoCG7SdNuJ4&downloadName=Untitled.png)
+   
    ![이미지](https://file.notion.so/f/f/0e6f57f1-72bb-4512-9abe-ab1b43b05d2c/198d9c9a-30db-4a5b-9683-0289af2117d0/Untitled.png?id=bc2f554c-564c-4aef-978c-2cb2fe2e85a3&table=block&spaceId=0e6f57f1-72bb-4512-9abe-ab1b43b05d2c&expirationTimestamp=1720843200000&signature=OJUrBNYEw9xEtPi2EZvuxn56B9lu8vy57blFa7TauNg&downloadName=Untitled.png)
    3. 새로운 Github repository 생성
    ![이미지](https://file.notion.so/f/f/0e6f57f1-72bb-4512-9abe-ab1b43b05d2c/c8ac554d-64c6-495f-8c2b-306efccf61e2/Untitled.png?id=74d1be33-2cd0-41f3-a113-a328b38a529c&table=block&spaceId=0e6f57f1-72bb-4512-9abe-ab1b43b05d2c&expirationTimestamp=1720843200000&signature=AdWSK1G3vspUslTviQpAVRLx6RtjSsvy9QKeJ-8Y5xU&downloadName=Untitled.png)
