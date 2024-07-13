@@ -44,10 +44,10 @@ def makeHotItem()
    - `git status`:  .git 파일의 상태를 보여줌
    - `git commit --amend`: 갓! 찍은 커밋의 커밋 **메세지**만 수정할 때 필요한 커맨드. 수정하고 싶은 커밋 이후에 계속 *커밋이 쌓인 경우 수정하고 싶었던 커밋의 메세지는 수정이 불가능하다*.  
     VIM 에디터 진입 후
-    ![](https://file.notion.so/f/f/0e6f57f1-72bb-4512-9abe-ab1b43b05d2c/d0bad0dc-5593-42b2-b8fb-c1ea72d265ca/2024-07-11-16-05-44.png?id=58370f66-6fde-47fa-adf2-ba64af8a4165&table=block&spaceId=0e6f57f1-72bb-4512-9abe-ab1b43b05d2c&expirationTimestamp=1720850400000&signature=xz5672IWXKejh1ojdBFnknX6OjAE40wLvXE1S9vcvSs&downloadName=2024-07-11-16-05-44.png) 
+    ![](./images/2024-07-11-16-05-44.png) 
     I를 눌러 Insert Mode 진입
-     ![](https://file.notion.so/f/f/0e6f57f1-72bb-4512-9abe-ab1b43b05d2c/f5840d51-63d4-4ab3-b2a2-b8ec549a7204/2024-07-11-16-08-16.png?id=75ba3efc-cf17-455c-8828-eb567df24fbe&table=block&spaceId=0e6f57f1-72bb-4512-9abe-ab1b43b05d2c&expirationTimestamp=1720850400000&signature=3Bg-gS6P87-vV5jg9Y1vXiY2KVvLAauRMuwS9u9ZWsk&downloadName=2024-07-11-16-08-16.png)
+     ![](./images/2024-07-11-16-08-16.png)
     이후 commit 메세지를 수정하고 esc를 눌러 에디터 모드에서 나간 후 `:wq` 로 터미널 복귀.
-    ![](https://file.notion.so/f/f/0e6f57f1-72bb-4512-9abe-ab1b43b05d2c/72b92ef5-74c3-48a8-bb7b-7d06fc1a12c6/image.png?id=adac16af-cc9d-44bf-81b9-03edad259de6&table=block&spaceId=0e6f57f1-72bb-4512-9abe-ab1b43b05d2c&expirationTimestamp=1720850400000&signature=_qSeX-Mp-ST0BT8z7lWkAxAWQwfKecTLFoZpmWy_3jQ&downloadName=image.png)
+    ![](./images/image.png)
 
 <br>
