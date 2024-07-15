@@ -23,4 +23,5 @@
 :muscle: : 오운완 / :pray: : 내일은 꼭!
 |7월3주차|최진문|박수민|하건수|김경민|이혜령|이가람|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|월요일|:muscle:|:muscle:|:muscle:|   |   |   |
+|월요일|:muscle:|:muscle:|:muscle:|:pray:|:pray:|:muscle:|
+|화요일|:muscle:|:muscle:|:muscle:|   |:muscle:|   |
