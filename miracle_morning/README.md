@@ -25,4 +25,5 @@
 |7월3주차|최진문|박수민|하건수|김경민|이혜령|이가람|도경원|송지영|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |월요일|:muscle:|:muscle:|:muscle:|:pray:|:pray:|:muscle:|---|---|
-|화요일|:muscle:|:muscle:|:muscle:|   |:muscle:|   |||
+|화요일|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:muscle:|:muscle:|
+|화요일|:muscle:|:muscle:||   |:muscle:|   |||
