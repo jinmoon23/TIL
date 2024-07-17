@@ -139,30 +139,28 @@ a = 1
 b = 2
 
 def enclosed():
+    # 함수 바깥의 a와는 전혀 다름!
     a = 10
     c = 3
 
     def local(c):
-        print(a, b, c)  #
+        print(a, b, c)  # 10, 2, 500
 
     local(500)
-    print(a, b, c)  #
-
+    print(a, b, c)  # 10, 2, 3
 
 enclosed()
 
-print(a, b)  #
+print(a, b)  # 1, 2
 ```
 
 - global 키워드: 내부 스코프를 외부 전역 범위로 확장하여 지정하기 위해 사용
 ```py
 num = 0  # 전역 변수
 
-
 def increment():
     global num  # num를 전역 변수로 선언
     num += 1
-
 
 print(num)  # 0
 
@@ -177,13 +175,11 @@ print(num)  # 1
 packed_values = 1, 2, 3, 4, 5
 print(packed_values)  # (1, 2, 3, 4, 5)
 
-
 numbers = [1, 2, 3, 4, 5]
 a, *b, c = numbers
 print(a)  # 1
 print(b)  # [2, 3, 4]
 print(c)  # 5
-
 
 def my_func(*objects):
     print(objects)  # (1, 2, 3, 4, 5)
