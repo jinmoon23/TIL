@@ -94,7 +94,7 @@ while number <= 0:
 print('잘했습니다!')
 ```
 - 반복 제어
-  - continue: 건너뛰기하는 구문
+  - continue: 다음 **While 반복**으로 건너뛰기하는 구문 / break는 while 반복문을 벗어나서 다음 코드로 건너뛰기함. 
 ```py
 # continue
 for i in range(10):
@@ -102,7 +102,7 @@ for i in range(10):
         continue
     print(i)
 ```
-- continue 추가 예시
+  - continue 추가 예시
 ```py
 # continue 예시 - "리스트에서 홀수만 출력하기"
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
