@@ -1,13 +1,14 @@
-import random
+t = int(input())
 
-testcase_number = 3
-testcase = {}
-random_list = []
+def find_add(list):
+    odd_list = []
+    for value in list:
+        if value % 2 != 0:
+            odd_list.append(value)
+    return sum(odd_list)
 
-for i in range(10):    
-    random_list.append(random.randint(0,10000))
 
-for j in range(testcase_number):
-    testcase[j] = random_list
-    
-print(testcase)
+for i in range(1,t+1):
+    test_num_list = list(map(int, input().split()))
+    result = find_add(test_num_list)
+    print(f'#{i} {result}')
