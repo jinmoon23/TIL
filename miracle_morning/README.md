@@ -31,4 +31,4 @@
 |금요일|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|
 |토요일|:pray:|:pray:|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:muscle:|
 |일요일|:pray:|:muscle:|:pray:|:muscle:|:pray:|:pray:|:muscle:|:pray:|
-
+|목표|달성!|달성!|달성!|달성!|1회 못함!|1회못함!|1회 못함!|달성!|
