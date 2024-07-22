@@ -29,6 +29,11 @@
 |수요일|:muscle:|:muscle:|:muscle:|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|
 |목요일|:muscle:|:muscle:|:pray:|:pray:|:muscle:|:pray:|:muscle:|:pray:|
 |금요일|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|
-|토요일|:pray:|:pray:|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:muscle:|
+|토요일|:pray:|:pray:|:muscle:|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|
 |일요일|:pray:|:muscle:|:pray:|:muscle:|:pray:|:pray:|:muscle:|:pray:|
-|목표|달성!|달성!|달성!|달성!|1회 못함!|1회못함!|1회 못함!|달성!|
+|목표|달성!|달성!|달성!|달성!|달성!|1회못함!|1회 못함!|달성!|
+
+
+|7월4주차|최진문|박수민|하건수|김경민|이혜령|이가람|도경원|송지영|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|월요일|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:muscle:|:muscle:|:pray:|

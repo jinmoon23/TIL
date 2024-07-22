@@ -3,9 +3,9 @@ t = int(input())
 def check(test_list, i):
     result_str = ''.join(test_list) # '01010101'
 
-    year_str = result_str[:4]
-    month_str = result_str[4:6]
-    day_str = result_str[6:8]
+    year_str = result_str[:4] # '0101'
+    month_str = result_str[4:6] # '01'
+    day_str = result_str[6:8] # '01'
 
     month_int = int(''.join(month_str)) # 01
     day_int = int(''.join(day_str)) # 01
