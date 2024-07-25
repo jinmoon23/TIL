@@ -41,3 +41,6 @@
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |월요일|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:muscle:|:muscle:|:pray:|
 |화요일|:muscle:|:muscle:|:pray:|:pray:|:muscle:|:pray:|:muscle:|:muscle:|
+|수요일|:muscle:|:pray:|:pray:|:pray:|:pray:|:muscle:|:pray:|:pray:|
+|목요일|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:pray:|:muscle:|
+
