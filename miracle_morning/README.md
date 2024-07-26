@@ -27,6 +27,7 @@
 :muscle: : 오운완! / :pray: : 내일은 꼭!
 |7월3주차|최진문|박수민|하건수|김경민|이혜령|이가람|도경원|송지영|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|목표|수영 주5회|헬스 주4회|헬스 주4회|헬스 주3회|헬스 주4회|헬스 주4회|헬스 주4회|러닝 주3회|
 |월요일|:muscle:|:muscle:|:muscle:|:pray:|:pray:|:muscle:|---|---|
 |화요일|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:muscle:|:muscle:|
 |수요일|:muscle:|:muscle:|:muscle:|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|
@@ -34,11 +35,12 @@
 |금요일|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|
 |토요일|:pray:|:pray:|:muscle:|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|
 |일요일|:pray:|:muscle:|:pray:|:muscle:|:pray:|:pray:|:muscle:|:pray:|
-|목표|달성!|달성!|달성!|달성!|달성!|1회못함!|1회 못함!|달성!|
+|달성여부|달성!|달성!|달성!|달성!|달성!|1회못함!|1회 못함!|달성!|
 
 
 |7월4주차|최진문|박수민|하건수|김경민|이혜령|이가람|도경원|송지영|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|목표|수영 주5회|헬스 주4회|헬스 주4회|헬스 주3회|헬스 주4회|헬스 주4회|헬스 주4회|러닝 주3회|
 |월요일|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:muscle:|:muscle:|:pray:|
 |화요일|:muscle:|:muscle:|:pray:|:pray:|:muscle:|:pray:|:muscle:|:muscle:|
 |수요일|:muscle:|:pray:|:pray:|:pray:|:pray:|:muscle:|:pray:|:pray:|
