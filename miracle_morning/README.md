@@ -38,11 +38,15 @@
 |달성여부|달성!|달성!|달성!|달성!|달성!|1회못함!|1회 못함!|달성!|
 
 
-|7월4주차|최진문|박수민|하건수|김경민|이혜령|이가람|도경원|송지영|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|7월4주차|최진문|박수민|하건수|김경민|이혜령|이가람|도경원|송지영|양불회 프로님|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |목표|수영 주5회|헬스 주4회|헬스 주4회|헬스 주3회|헬스 주4회|헬스 주4회|헬스 주4회|러닝 주3회|
-|월요일|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:muscle:|:muscle:|:pray:|
-|화요일|:muscle:|:muscle:|:pray:|:pray:|:muscle:|:pray:|:muscle:|:muscle:|
-|수요일|:muscle:|:pray:|:pray:|:pray:|:pray:|:muscle:|:pray:|:pray:|
-|목요일|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:pray:|:muscle:|
+|월요일|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:muscle:|:muscle:|:pray:|---|
+|화요일|:muscle:|:muscle:|:pray:|:pray:|:muscle:|:pray:|:muscle:|:muscle:|---|
+|수요일|:muscle:|:pray:|:pray:|:pray:|:pray:|:muscle:|:pray:|:pray:|---|
+|목요일|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:pray:|:muscle:|---|
+|금요일|:muscle:|:muscle:|:muscle:|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:muscle:|
+|토요일|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|
+|일요일|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:muscle:|:muscle:|:muscle:|:pray:|
+|달성여부|달성!|달성!|1회 미달!|달성!|달성!|달성!|1회 못함!|달성!|이번주 깍두기|
 
