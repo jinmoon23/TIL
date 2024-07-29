@@ -48,5 +48,5 @@
 |금요일|:muscle:|:muscle:|:muscle:|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:muscle:|
 |토요일|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|
 |일요일|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:muscle:|:muscle:|:muscle:|:pray:|
-|달성여부|달성!|달성!|1회 미달!|달성!|달성!|달성!|1회 못함!|달성!|이번주 깍두기|
+|달성여부|달성!|달성!|1회 미달!|달성!|달성!|달성!|1회 미달!|달성!|이번주 깍두기|
 
