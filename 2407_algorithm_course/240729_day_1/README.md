@@ -46,13 +46,13 @@ for i in range(1,test_case+1):
     test_number = int(input())
     arr = list(map(int,input().split()))
     count = 0
-
     for elem in arr:
-        a = elem - arr[arr.index(elem) - 2], elem - arr[arr.index(elem) - 1], elem - arr[arr.index(elem) + 2], elem - arr[arr.index(elem) + 1]
-        # 오류나는 이유 -> 뒤의 6에서 연산이 들어가야 하는데 앞의 6에서 들어감
-        if elem and min(a) > 0:
-            print(a)
-            count += min(a)
+        if elem:
+            a = elem - arr[arr.index(elem)-2], elem - arr[arr.index(elem)-1], elem - arr[arr.index(elem)+1], elem - arr[arr.index(elem)+2]
+            if min(a) < 0:
+                pass
+            else:
+                count += min(a)
 
     print(f'#{i} {count}')
 ```
