@@ -48,7 +48,7 @@
 |금요일|:muscle:|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:muscle:|:muscle:|
 |토요일|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|
 |일요일|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:muscle:|:muscle:|:muscle:|:pray:|
-|달성여부|달성!|달성!|1회 미달|달성!|달성!|1회 미달|1회 미달|달성!|이번주 깍두기 :)|
+|달성여부|달성!|달성!|**1회 미달**|달성!|달성!|**1회 미달**|**1회 미달**|달성!|이번주 깍두기 :)|
 
 |7월5주차|최진문|박수민|하건수|김경민|이혜령|이가람|도경원|송지영|양불회 프로님|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
