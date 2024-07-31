@@ -54,3 +54,6 @@
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |목표|수영 주5회|헬스 주4회|헬스 주4회|헬스 주3회|헬스 주4회|헬스 주4회|헬스 주4회|러닝 주3회|러닝 주3회|
 |월요일|:muscle:|:pray:|:muscle:|:muscle:|:pray:|:pray:|:muscle:|:pray:|:muscle:|
+|화요일|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:muscle:|:muscle:|:muscle:|:pray:|
+|수요일|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|
+
