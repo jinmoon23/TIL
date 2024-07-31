@@ -14,27 +14,31 @@
 # 3. 2의 과정을 마무리하고 work_count를 1 감소시킨다.
 # 4. 위의 과정을 work_count가 0이되거나 max_value - min_value <= 1이 될때까지 반복한다. 
 
-# import sys
-# sys.stdin = open('input.txt')
+import sys
+sys.stdin = open('input.txt')
 
-test_case_num = 1
+test_case_num = 10
 
 def solution(tc,work_list,work_count):
-    max_value = max(work_list) # 4
-    min_value = min(work_list) # 1
+    max_value = max(work_list) # 9 
+    min_value = min(work_list) # 1  
     while work_count != 0 and max_value - min_value  > 1:
         max_value_index = work_list.index(max_value) # 3
         min_value_index = work_list.index(min_value) # 0
-        work_list[max_value_index] -= 1 # [1,2,3,3]이 됨
-        max_value -= 1 # 3이 됨
-        work_list[min_value_index] += 1 # [2,2,3,3]이 됨
-        min_value += 1 # 2가 됨
+
+        work_list[max_value_index] -= 1 # [1,2,3,8]이 됨
+        max_value = max(work_list) # 9에 8이 재할당됨
+        max_value_index = work_list.index(max_value) # 3
+        work_list[min_value_index] += 1 # [2,2,3,8]이 됨
+        min_value = min(work_list)
+        min_value_index = work_list.index(min_value) # 0
+
         work_count -= 1 # 3이 됨
     result = max_value - min_value
     return f'#{tc} {result}'
     
 for tc in range(1,test_case_num+1):
-    work_count = 3 # 4 가정
-    work_list = [1,2,3,9] # [1,2,3,4] 가정
+    work_count = int(input()) # 4 가정
+    work_list =  list(map(int,input().split()))# [1,2,3,9] 가정
     print(solution(tc,work_list,work_count))
 
