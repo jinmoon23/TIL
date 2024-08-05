@@ -24,7 +24,7 @@ def reverse_string(string):
     result_str = ''
     # for i in range(1,len(string)+1):
     #     result_str += string[-i]
-    for i in range(len(string) - 1, -1, -1): # 8부터 0까지 1씩 줄어드는 i -> 8,7,6,5,4,3,2,1,0
+    for i in range(len(string) - 1, -1, -1): # 길이-1 부터 0까지 1씩 줄어드는 i -> 8,7,6,5,4,3,2,1,0
         result_str += string[i]
     return result_str
 
