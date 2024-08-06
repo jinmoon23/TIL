@@ -38,7 +38,7 @@ def find_max_len_palindrome(matrix):
             # 만약 string[i:i+1]이 회문조건을 충족한다면 palin_len += 1 하고 (i+3)+1의 슬라이싱도 회문조건을 충족하는지 확인. 반복.
                 if is_palindrome(slicing):
                     result_list.append(slicing) # 회문조건을 만족하는 경우 result_list에 그 슬라이싱을 저장
-                    # return len(slicing)
+
     for string in reversed_string_list:
         for i in range(matrix_size):
             for j in range(matrix_size,1,-1):
@@ -47,7 +47,7 @@ def find_max_len_palindrome(matrix):
             # 만약 string[i:i+1]이 회문조건을 충족한다면 palin_len += 1 하고 (i+3)+1의 슬라이싱도 회문조건을 충족하는지 확인. 반복.
                 if is_palindrome(slicing):
                     result_list.append(slicing) # 회문조건을 만족하는 경우 result_list에 그 슬라이싱을 저장
-                    # return len(slicing)
+
     result_len_list = [] # 회문조건을 만족하는 모든 경우의 슬라이싱의 길이를 저장
 
     for string in result_list:
@@ -72,9 +72,10 @@ T = 10
 for i in range(1, T + 1):
     case = int(input())
     matrix_size = 100
-    str_matrix = [input() for _ in range(matrix_size)]
+    str_matrix = [input() for _ in range(matrix_size)] # 이렇게 받아와도 되는 것 잊지말자
+    # 원래 input 받아왔던 코드
+    # str_matrix = [list(input().split()) for _ in range(matrix_size)] -> 변환하는데 시간 오래걸림
     print(f'#{case} {find_max_len_palindrome(str_matrix)}')
-
 
 end_time = time.time()
 

@@ -8,7 +8,6 @@
 
 import sys
 sys.stdin = open("input.txt", "r")
-
 def find_brackets(brackets):
     bracket_couple_dict = {'(':')',')':'('}
     stack_of_bracket = []
