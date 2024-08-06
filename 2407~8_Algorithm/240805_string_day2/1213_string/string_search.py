@@ -9,6 +9,7 @@ import sys
 sys.stdin = open("input.txt", encoding='UTF8')
 
 def search_str(find,original):
+    # index를 아래와 같이 설정하는 것이 핵심 아이디어
     i = 0 # original의 인덱스
     j = 0 # find의 인덱스
     result = 0
