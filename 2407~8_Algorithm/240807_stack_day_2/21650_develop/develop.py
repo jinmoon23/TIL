@@ -4,11 +4,13 @@
 순서대로 작업의 진도가 적힌 정수 배열 progresses
 각 작업의 개발 속도가 적힌 정수 배열 speeds
 각 배포마다 몇 개의 기능이 배포되는지를 return
+
 배포는 하루에 한 번만 할 수 있으며, 하루의 끝에 이루어진다고 가정합니다.
 예를 들어 진도율이 95%인 작업의 개발 속도가 하루에 4%라면 배포는 2일 뒤에 이루어집니다.
 ex) [93, 30, 55] [1,30,5] -> [2,1]
 1. 1일 후 [94,60,60] / 2일 후 [95,90,65] / 3일 후 [96,100,70] / 4일 후 [97,100,75] / 5일 후 [98,100,80] / 6일 후 [99,100,85] / 7일 후 [100,100,90] 1배포 / 8일 후 [95] / 9일 후 [100] 1배포 -> [2,1]
 ex) [95, 90, 99, 99, 80, 99] [1, 1, 1, 1, 1, 1]  -> [1, 3, 2]
+
 문제의 핵심
 1. 하루 1배포
 2. progresses 배열의 앞 인덱스부터 완료 되어야만 배포가능.
@@ -32,18 +34,10 @@ def solution(progresses, speeds):
         else:
             residual_day_list.append((residual_working_list[i] // speeds[i])+1)
 
-    # for day in residual_day_list:
-    #     cnt = 1
-    #     for i in range(1,len(residual_day_list)):
-    #         if day < residual_day_list[i]:
-    #             answer.append(cnt)
-    #         else:
-    #             cnt += 1
-    #             continue
-
-
-
     return answer
+
+
+
 
 # print(solution([93,30,55],[1,30,5]))
 print(solution([95, 90, 99, 99, 80, 99],[1, 1, 1, 1, 1, 1]))
