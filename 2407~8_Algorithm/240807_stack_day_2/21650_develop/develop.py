@@ -18,6 +18,9 @@ ex) [95, 90, 99, 99, 80, 99] [1, 1, 1, 1, 1, 1]  -> [1, 3, 2]
 
 접근 아이디어
 1. 잔여 작업일수를 list 형태로 정리한 후 elem의 부등호 상태에 따라 따로 설정한 리스트에 저장 후 길이 리턴
+2. residual_day_list[i] >= residual_day_list[i+j] 인 경우 residual_day_list[i] < residual_day_list[i+j]를 충족할 때 까지의 모든 값을 따로 설정한 2차원배열에 넣고싶다.
+    ex) [10,1,1,20] 의 경우 [[10,1,1],[20]] 이런 방식으로.
+3.
 '''
 
 def solution(progresses, speeds):
@@ -33,10 +36,25 @@ def solution(progresses, speeds):
             residual_day_list.append(residual_working_list[i] // speeds[i])
         else:
             residual_day_list.append((residual_working_list[i] // speeds[i])+1)
+    # 여기까지 잔여 작업일수 구하는 코드
+
+    stack =[]
+
+    for i in range(len(residual_day_list)):
+        if not stack:
+            stack.append(residual_day_list[i])
+        else:
+            if stack[0] >= residual_day_list[i]:
+                stack.append(residual_day_list[i])
+            else:
+                answer.append(len(stack))
+                stack.clear()
+                stack.append(residual_day_list[i]) # 스택 관리의 핵심
+        if i == len(residual_day_list)-1: # 탐색이 마무리된 경우 처리
+            if stack:
+                answer.append(len(stack))
 
     return answer
-
-
 
 
 # print(solution([93,30,55],[1,30,5]))
