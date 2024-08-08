@@ -22,14 +22,15 @@ def postfix_notation(expresion):
     for char in expresion:
         if char.isdigit(): # 피연산자면 result에 곧바로 넣기
             result.append(char)
-        elif not char.isdigit() and operation_dict[char] == 1: # + 또는 - 연산자면 곧바로 스택에 넣기
-            if stack and operation_dict[stack[-1]] == 0:
-                result.append(stack.pop())
+        elif not char.isdigit() and operation_dict[char] == 1: # + 또는 - 연산자인 경우
+            if stack and operation_dict[stack[-1]] == 0: # 스택에 값이 있고 그 스택이 우선순위가 빠른 연산자인 경우
+                while stack:
+                    result.append(stack.pop())
                 stack.append(char)
             else:
                 stack.append(char)
-        if not char.isdigit() and operation_dict[char] == 0: # * 또는 / 의 경우 같은 우선순위의 연산자가 스택에 없는 경우에만 스택에 넣기
-            if not stack or operation_dict[stack[-1]] == 1: # 스택이 비어있다면 아래 코드 실행
+        if not char.isdigit() and operation_dict[char] == 0: # * 또는 / 의 경우
+            if not stack or operation_dict[stack[-1]] == 1:
                 stack.append(char)
             elif operation_dict[stack[-1]] == 0:
                 result.append(stack.pop())
@@ -40,7 +41,6 @@ def postfix_notation(expresion):
                 result.append(stack.pop())
 
     return ''.join(result)
-
 
 T = int(input())
 for test_case in range(1, T + 1):

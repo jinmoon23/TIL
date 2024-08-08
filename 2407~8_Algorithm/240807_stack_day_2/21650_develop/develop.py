@@ -40,17 +40,17 @@ def solution(progresses, speeds):
 
     stack =[]
 
-    for i in range(len(residual_day_list)):
-        if not stack:
-            stack.append(residual_day_list[i])
-        else:
+    for i in range(len(residual_day_list)): # 예시 리스트 = [7,3,9]
+        if not stack: # 스택이 비어있는 경우
+            stack.append(residual_day_list[i]) # i = 0 / stack = [7]
+        else: # 스택에 값이 들어있는 경우
             if stack[0] >= residual_day_list[i]:
-                stack.append(residual_day_list[i])
-            else:
-                answer.append(len(stack))
+                stack.append(residual_day_list[i]) # i = 1 / stack = [7,3]
+            else: # 예를들어 stack = [7,3] / residual_day_list[i] == 20 -> 7 < 9 -> else 이하 코드 동작
+                answer.append(len(stack)) # stack = [7,3] -> answer = [2]
                 stack.clear()
-                stack.append(residual_day_list[i]) # 스택 관리의 핵심
-        if i == len(residual_day_list)-1: # 탐색이 마무리된 경우 처리
+                stack.append(residual_day_list[i]) # 스택 관리의 핵심 -> stack = [9]
+        if i == len(residual_day_list)-1: # 탐색이 마무리되었는데 stack에 값이 남아있는 경우 처리
             if stack:
                 answer.append(len(stack))
 
