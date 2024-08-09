@@ -23,7 +23,8 @@ def pascal_triangle(size):
     for i in range(size):
         while pascal_matrix[i]:
 
-            print(pascal_matrix[i].pop())
+            print(pascal_matrix[i].pop(),end=' ')
+        print()
 
 
 T = int(input())
