@@ -44,5 +44,5 @@ def postfix_notation(expresion):
 
 T = int(input())
 for test_case in range(1, T + 1):
-    expression = input()
+    expression = '3+2*5-8/4'
     print(postfix_notation(expression))

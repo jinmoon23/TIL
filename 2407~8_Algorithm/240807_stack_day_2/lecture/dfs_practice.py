@@ -36,7 +36,6 @@ def dfs(s,V):
             else: # 스택에 남은 요소가 없거나 갈림길이 없는 경우
                 break # while의 break
 
-
 T = 1
 for tc in range(1,T+1):
     V,E = map(int,input().split()) # V는 숫자 갯수 / E는 인접(연결) 갯수

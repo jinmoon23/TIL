@@ -17,6 +17,7 @@ def find_dfs_path(point_arr):
     visited = [0] * (point_count+1) # 방문여부를 기록하기위한 리스트
     start_point = 1
     result_list = []
+
     for i in range(line_count): # input으로 받은 포인트와 간선을 점간의 연결을 나타내도록 리스트로 변환하는 과정
         point, connected_point = point_arr[i*2],point_arr[i*2+1] # connected_list에서 point는 index를, connected_point는 연결된 정점을 나타낸다.
         connected_list[point].append(connected_point)
