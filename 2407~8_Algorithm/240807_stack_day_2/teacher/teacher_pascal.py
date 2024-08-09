@@ -20,7 +20,6 @@ def pascal_triangle(row, col):
     # 재귀적으로 위 두 값을 더함
     return pascal_triangle(row - 1, col - 1) + pascal_triangle(row - 1, col)
 
-
 T = int(input())
 for tc in range(1, T + 1):
     N = int(input())

@@ -4,6 +4,7 @@
 N을 입력 받아 크기 N인 파스칼의 삼각형을 출력하는 프로그램을 작성하시오.
 삼각형 각 줄의 처음 숫자가 나오기 전까지의 빈 칸은 생략하고 숫자들 사이에는 한 칸의 빈칸을 출력한다.
 '''
+
 import sys
 sys.stdin = open("input.txt", "r")
 
@@ -20,15 +21,20 @@ def pascal_triangle(size):
         while 0 in pascal_matrix[i]:
             pascal_matrix[i].pop()
     # 이 위 코드까지 파스칼 삼각형 완성
+    # 아래 코드는 강사님이 출력하는 코드 -> pop하지 않고도 가능함!
+    # for i in range(N):
+    #     # 각 행에서 i행이면 i번째까지만 출력
+    #     # 왜냐면 나머지는 0으로 채웠기 때문
+    #     print(' '.join(map(str, triangle[i][:i + 1])))
+
+    # 아래 코드는 출력을 위한 설정 코드
     for i in range(size):
         while pascal_matrix[i]:
-
             print(pascal_matrix[i].pop(),end=' ')
         print()
-
 
 T = int(input())
 for test_case in range(1, T + 1):
     pascal_size = int(input())
     print(f'#{test_case}')
-    print(f'{pascal_triangle(pascal_size)}')
+    pascal_triangle(pascal_size)
