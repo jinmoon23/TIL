@@ -22,6 +22,7 @@ def pascal_triangle(size):
             pascal_matrix[i].pop()
     # 이 위 코드까지 파스칼 삼각형 완성
     # 아래 코드는 강사님이 출력하는 코드 -> pop하지 않고도 가능함!
+
     # for i in range(N):
     #     # 각 행에서 i행이면 i번째까지만 출력
     #     # 왜냐면 나머지는 0으로 채웠기 때문
