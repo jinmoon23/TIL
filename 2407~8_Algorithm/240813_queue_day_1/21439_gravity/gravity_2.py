@@ -19,6 +19,8 @@
 3. 완성된 배열의 가장 작은 값과 높이의 차이를 리턴하면 됨.
 
 위 접근은 3번째 테스트케이스를 대비하지 못함. 폐기
+
+새로운 접근법
 1.
 
 '''
@@ -26,16 +28,24 @@
 import sys
 sys.stdin = open("sample_input (2).txt", "r")
 
-def gravity(height_list):
+def gravity(width):
+    structures_matrix = [[0] * width for _ in range(HEIGHT)]
+    for j in range(width):
+        for i in range(HEIGHT-1,(HEIGHT-1) - structures_height_list[j],-1):
+            structures_matrix[i][j] = 1
 
-    pass
 
+    max_value = result_list[0]
+    for i in range(len(result_list)):
+        if max_value < result_list[i]:
+            max_value = result_list[i]
+
+    return max_value
 
 
 T = int(input())
 for test_case in range(1, T + 1):
     HEIGHT = 100
-    structures = int(input())
+    structures = int(input()) # 건축물들의 수 즉, width의 길이
     structures_height_list = list(map(int,input().split()))
-    # structures_height_list = [3, 2, 3, 4, 5, 6, 7]
-    print(f'#{test_case} {gravity(structures_height_list)}')
+    print(f'#{test_case} {gravity(structures)}')
