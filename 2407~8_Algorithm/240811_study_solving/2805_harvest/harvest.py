@@ -14,6 +14,9 @@ N X N크기의 농장
 1. 수확의 중심을 찾는다.
 2. 1에서 찾은 중심 행의 모든 값을 더하고 임의설정한 리스트에 그 값을 append한다.
 3. 바로 위 행으로 이동하여 특정 조건을 만족하는 행렬의 값을 모두 더하여 1의 리스트에 append한다.
+
+핵심 아이디어
+- middle_of_farm을 찾는 것!
 '''
 import sys
 sys.stdin = open("input-6.txt", "r")
@@ -21,15 +24,14 @@ sys.stdin = open("input-6.txt", "r")
 def harvest(matrix):
     middle_of_farm = farm_size // 2
     result_list = []
-    k = 1
-
+    k = 1 # reverse_farm을 아래로 내리기 위한 변수 -> 더 좋은 방법이 있을 것 같은데..
     for i in range(farm_size):
         if middle_of_farm >= 0:
-            result_list.append(sum(matrix[middle_of_farm][i:farm_size-i]))
-            middle_of_farm = middle_of_farm -1
+            result_list.append(sum(matrix[middle_of_farm][i:farm_size-i])) # 한 row씩 올라가면서 수확에 해당하는 행의 일부분을 모두 더함
+            middle_of_farm -= 1
         else:
             reverse_farm = (farm_size // 2) +k
-            result_list.append(sum(matrix[reverse_farm][i-(farm_size//2):farm_size-i+(farm_size//2)]))
+            result_list.append(sum(matrix[reverse_farm][i-(farm_size//2):farm_size-i+(farm_size//2)])) # 한 row씩 내려가면서 더함
             reverse_farm += 1
             k += 1
 

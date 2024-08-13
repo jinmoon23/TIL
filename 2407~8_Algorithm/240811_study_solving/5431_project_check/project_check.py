@@ -10,6 +10,9 @@
 2. 다음줄에서 주어지는 제출자의 번호를 위 리스트에서 삭제한다. -> remove나 pop을 사용하니 인덱스 에러가 자주 발생.
     -> F_list 를 생성해 포함되어 있지 않는 elem만 찾아서 담아 해결.
 3. 담은 후의 리스트를 오름차순 정렬 후 리턴한다.
+
+핵심 아이디어
+- not in!
 '''
 import sys
 sys.stdin = open("sample_input.txt", "r")
