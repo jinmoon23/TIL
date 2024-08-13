@@ -14,6 +14,7 @@ N개의 과목에 대한 시험을 쳤다. 각 과목의 점수는 정수이고 
 '''
 import sys
 sys.stdin = open("sample_input.txt", "r")
+
 def find_max_subset_sum(subsets_number):
     subsets = []
     for i in range(subsets_number):

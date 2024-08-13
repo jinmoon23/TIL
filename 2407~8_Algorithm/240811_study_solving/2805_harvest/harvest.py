@@ -21,14 +21,17 @@ sys.stdin = open("input-6.txt", "r")
 def harvest(matrix):
     middle_of_farm = farm_size // 2
     result_list = []
+    k = 1
+
     for i in range(farm_size):
         if middle_of_farm >= 0:
             result_list.append(sum(matrix[middle_of_farm][i:farm_size-i]))
             middle_of_farm = middle_of_farm -1
         else:
-            reverse_farm = (farm_size // 2) +1
+            reverse_farm = (farm_size // 2) +k
             result_list.append(sum(matrix[reverse_farm][i-(farm_size//2):farm_size-i+(farm_size//2)]))
             reverse_farm += 1
+            k += 1
 
     return sum(result_list)
 
