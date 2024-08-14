@@ -21,8 +21,10 @@
 위 접근은 3번째 테스트케이스를 대비하지 못함. 폐기
 
 새로운 접근법
-1.
-
+1. spin전의 형태를 저장하는 2차원 배열을 생성
+    1-1. 예를들어 높이가 0번 인덱스 값이 7인 건물의 경우 1을 7번 기둥세우기
+2. 1의 우측에 0이 있으면(낙차가 있다) 카운트를 올려주고 반복
+3. 최대값 리턴
 '''
 
 import sys
@@ -30,15 +32,29 @@ sys.stdin = open("sample_input (2).txt", "r")
 
 def gravity(width):
     structures_matrix = [[0] * width for _ in range(HEIGHT)]
+
     for j in range(width):
         for i in range(HEIGHT-1,(HEIGHT-1) - structures_height_list[j],-1):
             structures_matrix[i][j] = 1
 
+    fall_count_list = []
+    for i in range(HEIGHT-1,-1,-1):
+        for j in range(structures):
+            if structures_matrix[i][j] == 1:
+                fall_count = 0
+                for k in range(1,structures):
+                    if j+k >= structures: continue
+                    if structures_matrix[i][j+k] == 0:
+                        fall_count += 1
+                fall_count_list.append(fall_count)
 
-    max_value = result_list[0]
-    for i in range(len(result_list)):
-        if max_value < result_list[i]:
-            max_value = result_list[i]
+    if not fall_count_list:
+        return 0
+    else:
+        max_value = fall_count_list[0]
+        for i in range(len(fall_count_list)):
+            if max_value < fall_count_list[i]:
+                max_value = fall_count_list[i]
 
     return max_value
 
