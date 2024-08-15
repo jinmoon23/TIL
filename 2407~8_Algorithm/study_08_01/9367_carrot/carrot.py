@@ -18,12 +18,12 @@ def counting_upsize_carrot(carrot_size_list):
     for i in range(N-1):
         if carrot_size_list[i] < carrot_size_list[i+1]:
             count += 1
-            if count >= 3:
+            if count >= 2:
                 result_count_list.append(count)
         else:
             count = 1
             if i == N-2:
-                result_count_list.append(1)
+                result_count_list.append(count)
     return max(result_count_list)
 
 

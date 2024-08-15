@@ -17,20 +17,21 @@ import sys
 sys.stdin = open('input.txt')
 
 def switch_controlled(switches_list,student_number):
-
     for i in range(student_number):
-        if gender_list[i] == 1: # 남학생이 조작하는 경우
+        if gender_given_list[i][0] == 1: # 남학생이 조작하는 경우
             for j in range(1,len(switches_list)+1): # 스위치 번호
-                if j % chances_list[i] == 0:
+                if j % gender_given_list[i][1] == 0:
                     switches_list[j-1] = control_switch(switches_list[j-1])
 
         else: # 여학생이 조작하는 경우
             k = 1  # 인덱스 이동시키기 위한 변수 -> 핵심입니다! 함수 가장 바깥에 위치시키면 다른 여학생(2번째 이후)의 경우 고려가 안됩니다.
-            check_value = chances_list[i] # 비교를 시작하는 스위치 위치 저장
+            check_value = gender_given_list[i][1] # 비교를 시작하는 스위치 위치 저장
             switches_list[check_value - 1] = control_switch(switches_list[check_value - 1]) # 자기 자신은 항상 변경해줌!
+
             # 아래 while문의 올바른 설정이 내 접근의 핵심
             # 파이썬은 위에서 아래로, 왼쪽에서 오른쪽으로 코드를 해석하기 때문에 인덱스 에러관련 코드는 적절하게 배치해야 한다.
             # if check_value-1-k<0 or check_value-1+k>=len(switches_list) 를 while문의 가장 아래에 위치시켰는데 인덱스에러 발생. 아마 while문 위치에서 코드가 터지지 않았나 추측함.
+
             while check_value-1-k>=0 and check_value-1+k<len(switches_list) and switches_list[check_value-1-k] == switches_list[check_value-1+k]: # 자기 자신 양옆이 대칭(같은 값)이면 스위치 토글
                 switches_list[check_value-1-k], switches_list[check_value-1+k] = control_switch(switches_list[check_value-1-k]), control_switch(switches_list[check_value-1+k])
                 k+=1 # 더 멀리 이동해서 확인하기 위한 변수 설정
@@ -47,18 +48,15 @@ switches_list =list(map(int,input().split()))
 student_number = int(input())
 
 # 이 밑의 input값을 받는게 정말 힘들었음..
-gender_list = []
-chances_list = []
-for i in range(student_number):
-    gender, given_chances = map(int,input().split())
-    gender_list.append(gender)
-    chances_list.append(given_chances)
+# gender_list = []
+# chances_list = []
+# for i in range(student_number):
+#     gender, given_chances = map(int,input().split())
+#     gender_list.append(gender)
+#     chances_list.append(given_chances)
 
 # 이런식으로 받으면 더 간편?
 gender_given_list = [list(map(int,input().split())) for _ in range(student_number)]
-
-# 강사님의 코드
-# student_list = [list(map(int, input().split())) for _ in range(student_count)]
 
 res = switch_controlled(switches_list,student_number)
 for i in range(1, switch_number + 1):
