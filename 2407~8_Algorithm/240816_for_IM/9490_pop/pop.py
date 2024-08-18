@@ -25,7 +25,6 @@ def pop(matrix):
                 nx = i + dx
                 ny = j + dy
                 for k in range(matrix[i][j]):
-                    # if nx-k < 0 or nx+k >= row or ny-k < 0 or ny+k >= column: continue
                     if dx == 0 and dy == -1: # 좌 delta 접근 시
                         if ny-k < 0: continue
                         pop_count += matrix[nx][ny-k]
@@ -46,9 +45,6 @@ def pop(matrix):
             max_value = result_list[i]
 
     return max_value
-
-
-
 
 T = int(input())
 for test_case in range(1, T + 1):
