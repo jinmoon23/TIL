@@ -38,7 +38,7 @@ def find_dfs_path(point_arr):
                 start_point = elem
                 break # for문을 종료하고 while문을 다시 실행하면서 다시 for문을 실행 -> 핵심 아이디어 -> start_point가 변경된 이후이므로 다음 for 반복 시 그 값에서 시작되어 elem이 변동한다.
         else: # for문이 break 등으로 중간에 빠져나오지 않고 끝까지 실행 됐을 경우 else문이 실행되는 방식으로 진행됩니다.
-            if stack: # 스택이 비어있지 않다면 아래 코드 실행
+            if stack: # 스택이 비어있지 않다면 탐색이 종료되지 않은 경우이므로 되돌아가는 아래 로직 실행
                 start_point = stack.pop()
             else: # 스택이 비어있다면 탐색이 종료된 경우이므로 while문 종료
                 break
