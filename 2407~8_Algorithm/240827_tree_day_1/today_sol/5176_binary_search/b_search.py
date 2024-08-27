@@ -6,18 +6,33 @@ N이 주어졌을 때 완전 이진 트리로 만든 이진 탐색 트리의 '�
 문제접근
 1. 1~N까지의 값을 완전이진트리에 저장
 2. 트리를 중위순회하며 규칙을 만족할때까지 값을 변경
+
+하.. 완전히 잘못 이해했다.
+- 중위순회의 순서대로 노드에 값을 넣어주면 됨
+
 '''
 
 import sys
 sys.stdin = open('sample_input.txt')
 
+def make_tree(n):
+    global cnt
+    global tree
+
+    if n < N+1: # N이 13인 경우 13까지는 채워넣어야 하기 때문! 완전 이진트리를 만들어야 하니까.
+        make_tree(n*2)
+        # 중위순회이기 때문에 이곳에 코드구성
+        cnt += 1
+        tree[n] = cnt
+        make_tree((n*2)+1)
+
 T = int(input())
 for test_case in range(1, T + 1):
     N = int(input())
-    nums = list(range(1,N+1))
-    tree = [[0,0] for _ in range(N+1)]
-    p_cnt = N // 2
-    for i in range(1,p_cnt+1):
-        tree[i][0], tree[i][1] = nums[i], nums[i+1]
+    tree = [0] * (N+1)
+    cnt = 0
+    make_tree(1)
+    print(tree)
+    print(f'#{test_case} {tree[1]} {tree[N//2]}')
 
 
