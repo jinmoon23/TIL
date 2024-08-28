@@ -23,12 +23,14 @@ def heap(node):
     if tree[node] > tree[(node * 2) + 1]:
         tree[node], tree[node * 2 + 1] = tree[node * 2 + 1], tree[node]
     heap(node * 2)
+
 T = int(input())
 for test_case in range(1, T + 1):
     N = int(input())
     tree = list(map(int,input().split()))
     tree.insert(0,0)
     heap(1)
+    print(tree)
     p_idx = N // 2
     res = 0
     while p_idx != 1:
