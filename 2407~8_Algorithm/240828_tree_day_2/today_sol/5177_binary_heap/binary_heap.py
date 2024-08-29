@@ -28,9 +28,6 @@ def make_heap(node):
         tree[node*2] = l
     make_heap(node+1)
 
-
-
-
 T = int(input())
 for test_case in range(1, T + 1):
     N = int(input())
