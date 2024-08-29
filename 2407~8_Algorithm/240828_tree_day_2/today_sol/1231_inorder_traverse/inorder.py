@@ -23,7 +23,7 @@ T = 10
 for tc in range(1,T+1):
     N = int(input())
     infos = [input().split() for _ in range(N)]
-    tree_v = [0]
+    tree_v = []
     tree = [[0,0] for _ in range(N+1)]
 
     for info in infos:
@@ -37,6 +37,7 @@ for tc in range(1,T+1):
                 if info[2] != '0' or info[3] != '0':
                     tree[int(char)][0] = int(info[2])
                     tree[int(char)][1] = int(info[3])
+    print(infos)
     res = ''
     inorder(1)
     print(f'#{tc} {res}')

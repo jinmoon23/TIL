@@ -4,33 +4,41 @@
 새로 추가된 노드의 값이 조건에 맞지 않는 경우, 조건을 만족할 때까지 부모 노드와 값을 바꾼다.
 입력 순서대로 이진 최소힙에 저장
 마지막 노드의 조상 노드에 저장된 정수의 합을 알아내는 프로그램
+7, 2, 5, 3, 4, 6이 '차례로' 입력되면!!!!
 '''
 
 import sys
 sys.stdin = open("sample_input.txt", "r")
 
-def heap(node):
-    if node >= N // 2:
-        if node * 2> N: return
-        if tree[node] > tree[node * 2]:
-            tree[node], tree[node * 2] = tree[node * 2], tree[node]
-        if node * 2 + 1 > N: return
-        if tree[node] > tree[(node * 2) + 1]:
-            tree[node], tree[node * 2 + 1] = tree[node * 2 + 1], tree[node]
-        return
-    if tree[node] > tree[node * 2]:
-        tree[node], tree[node * 2] = tree[node * 2], tree[node]
-    if tree[node] > tree[(node * 2) + 1]:
-        tree[node], tree[node * 2 + 1] = tree[node * 2 + 1], tree[node]
-    heap(node * 2)
+def make_heap(node):
+    if node > N//2: return
+    if node*2+1 <= N:
+        c,l,r = arr[node], arr[node*2],arr[node*2+1]
+        tree[node], tree[node * 2], tree[node*2+1] = c,l,r
+        if c > l:
+            tree[node], tree[node * 2] = l,c
+            arr[node], arr[node * 2] = arr[node * 2], arr[node]
+        elif c > r:
+            tree[node], tree[node * 2+1] = r, c
+            arr[node], arr[node * 2+1] = arr[node * 2+1], arr[node]
+        else:
+            tree[node*2] = l
+    else:
+        l = arr[node*2]
+        tree[node*2] = l
+    make_heap(node+1)
+
+
+
 
 T = int(input())
 for test_case in range(1, T + 1):
     N = int(input())
-    tree = list(map(int,input().split()))
-    tree.insert(0,0)
-    heap(1)
-    print(tree)
+    arr = [0] + list(map(int,input().split())) # [0, 7, 2, 5, 3, 4, 6]
+    tree = [0] * (N+1)
+    tree[1] = arr[1]
+    make_heap(1)
+    print(tree) # [0, 7, 2, 5, 3, 4, 6]
     p_idx = N // 2
     res = 0
     while p_idx != 1:
