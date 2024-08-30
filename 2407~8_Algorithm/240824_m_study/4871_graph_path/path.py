@@ -6,7 +6,7 @@ V개 이내의 노드를 E개의 간선으로 연결한 방향성 그래프에 �
 import sys
 sys.stdin = open("4871_input.txt", "r")
 
-def def():
+def dfs():
     stack.append()
 T = int(input())
 for test_case in range(1, T + 1):

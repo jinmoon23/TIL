@@ -25,9 +25,9 @@ def pwd_generator(N,pwd_can):
                       # 쉽게말해 [1,3,5,4,4]가 있는 경우 1,3을 확인 3,5를 확인, 5,4를 확인, 4,4를 확인하기 위함
     else: # 가장 위의 for문이 종료된 후 남아있는 쌍값을 소거하기 위해 for - else 사용
         for i in range(N-1):
-            if pwd_can[i] != pwd_can[i+1]: continue # 연속된 값들을 확인함. 만약 같은값이 한쌍이라도 있다면 아직 비밀번호 생성이 완료되지 않은 것.
-            else:
-                return pwd_generator(N, pwd_can) # 비말번호가 생성될 때까지 재귀호출
+            if pwd_can[i] != pwd_can[i+1]: continue # 연속된 값들을 확인함.
+            else: # 만약 같은값이 한쌍이라도 있다면 아직 비밀번호 생성이 완료되지 않은 것.
+                return pwd_generator(N, pwd_can) # 비밀번호가 생성될 때까지 재귀호출
         else: # for문이 모두 종료된 경우에도 재귀호출이 되지 않았다는 것은 의도한대로 비밀번호가 생성되었다는 것이므로 return하고 함수 종료.
             return ''.join(pwd_can)
 

@@ -33,10 +33,10 @@ def min_charge(K,elec_M,stops):
     while True:
         slc = stops[i:i+K] # i를 계속적으로 변경해 정류장에 접근하기 위한 슬라이싱.
         for j in list(reversed(slc)): # 최대 운행가능거리에 딱 맞는 경우를 식별하기 위한 reversed 확인.
-            if j in elec_M:
+            if j in elec_M: # elec_M == [1,3,5,7,9] 즉, 슬라이싱 한 리스트 내부를 뒤에서 접근해 충전기가 있는 정류소인지 확인
                 cnt += 1
                 i = stops.index(j) + 1 # +1을 하는 이유는 확인했던 정류장을 중복해서 확인하지 않기 위함.
-                if j + K >= N: # 이 경우는 종점이 최대 운행거리보다 가깝거나 동일한 경우 추가적인 확인이 불필요하기 때문.
+                if j + K >= N: # 이 경우는 종점이 i에서의 최대 운행거리보다 가깝거나 동일한 경우 추가적인 확인이 불필요하기 때문.
                     return cnt
                 break
         else:
