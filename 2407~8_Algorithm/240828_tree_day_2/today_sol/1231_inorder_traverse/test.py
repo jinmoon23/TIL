@@ -37,7 +37,6 @@ for tc in range(1,T+1):
                 if info[2] != '0' or info[3] != '0':
                     tree[int(char)][0] = int(info[2])
                     tree[int(char)][1] = int(info[3])
-    print(infos)
     res = ''
     inorder(1)
     print(f'#{tc} {res}')
