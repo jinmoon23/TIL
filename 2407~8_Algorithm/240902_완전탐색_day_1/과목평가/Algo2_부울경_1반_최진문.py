@@ -11,7 +11,6 @@
 
 import sys
 sys.stdin = open('algo2_sample_in.txt')
-
 def make_pwd(node):
     # 완전이진트리의 특성 이용한 종료조건설정
     if node > CANDIDATE_NUM:
@@ -45,9 +44,8 @@ for tc in range(1,T+1):
         # 재귀함수 호출
         make_pwd(1)
     else:
-        # print(pwd)
         for i in range(N):
-            result.append(pwd[i*7:i*7+7])
+            result.append(pwd[i*CANDIDATE_NUM:i*CANDIDATE_NUM+CANDIDATE_NUM])
     print(f'#{tc}', end=' ')
     for i in range(N):
         res = map(str,result[i])

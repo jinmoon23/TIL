@@ -13,19 +13,16 @@ for tc in range(1,T+1):
     k = 1 # 만약 대칭되는 경우를 찾는 경우 추가적인 대칭을 파악하기 위한 변수
     cnt = 1
     d_lst = []
+
     for i,char in enumerate(block):
         if i-k<0 or i+k>=N: continue # 인덱스 범위를 벗어나서 탐색하는 경우 방지하기 위한 early return
         while i-k >= 0 and i+k < N and block[i-k] == block[i+k]:
             # 인덱스 범위를 벗어나지 않고 대칭되는 경우 카운트
             cnt += 2
             k += 1
-        # 인덱스 범위를 벗어났거나 대칭되지 않는 경우 아래 if문을 통해 cnt 담기
-        if cnt > 1:
-            d_lst.append(cnt)
-            cnt = 1
-            k = 1
-    if d_lst:
-        print(f'#{tc} {max(d_lst)}')
-    else:
-        print(f'#{tc} {cnt}')
+        d_lst.append(cnt)
+        cnt = 1
+        k = 1
+    print(f'#{tc} {max(d_lst)}')
+
 
