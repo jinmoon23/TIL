@@ -26,27 +26,35 @@
 import sys
 sys.stdin = open('sample_input.txt')
 
+def sol(i,start,end):
+    global cnt
+    # 1. 종료조건 설정
+    if i > N-1:
+        return
+    # 2. 호출 전 동작 설정
+    if end <= n_table[i][0]:
+        cnt += 1
+        i += 1
+        # 3. 재귀호출
+        sol(i,n_table[i-1][0],n_table[i-1][1])
+    else:
+        # 조건을 만족하지 않는경우 넘어가기
+        i += 1
+        # 3. 재귀호출
+        sol(i, start, end)
+
 T = int(input())
 for tc in range(1,T+1):
     N = int(input())
     w_table = [list(map(int,input().split())) for _ in range(N)]
+
     # 종료시간이 빠른 순서대로 오름차순 정렬
     n_table = sorted(w_table, key= lambda x:x[1])
-    print(n_table)
-    for i in range(N):
-        if n_table[-1]
-
-    # time_table = list(range(0,25))
-    # cnt = 0
-    # # 종료시간이 빠른 순서대로 타임테이블을 차지(0)하고 이후에 사용자가 시간을 쓰려고 하면 break
-    # for i in range(N):
-    #     s,e = n_table[i]
-    #     for j in range(s,e):
-    #         if time_table[j] != 0:
-    #             time_table[j] = 0
-    #         else:
-    #             cnt -= 1
-    #             break
-    #     cnt += 1
+    # print(n_table)
+    idx = 1
+    s,c = n_table[0]
+    cnt = 1
+    # 재귀호출
+    sol(idx,s,c)
 
     print(f'#{tc} {cnt}')
