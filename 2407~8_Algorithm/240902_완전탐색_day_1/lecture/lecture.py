@@ -55,10 +55,10 @@ def KFC(level):
         # 또한 시간복잡도가 O(len(path)) 이기 때문에 터질 수 있다!
 
         # 아래 코드로 시간복잡도를 낮추고 중복이 없는 순열생성을 보장할 수 있다.
-        if used[i] == 1: continue
+        # if used[i] == 1: continue
 
         # 2.1 경로 기록 + 방문기록
-        used[i] = 1
+        # used[i] = 1
         path.append(i)
 
         # 2.2 다음 재귀 호출
@@ -66,6 +66,6 @@ def KFC(level):
 
         # 2.3 돌아왔을 때 + 방문삭제
         path.pop()
-        used[i] = 0
+        # used[i] = 0
 
 KFC(0)
