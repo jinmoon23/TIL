@@ -14,7 +14,8 @@ for tc in range(1,T+1):
     N = int(input()) # 노드의 개수
     E = N - 1
     E_infos = [list(map(int, input().split())) for _ in range(N)]
-    find = E_infos[-1]
-    tree = [[0,0] for _ in range(N+1)]
+    find = E_infos.pop()
+    tree = [[] for _ in range(N+1)]
     for info in E_infos:
-        tree[info[0]] = info[1]
+        tree[info[0]].append(info[1])
+    print(tree) # [[], [14, 13], [], [], [6, 10], [9], [15, 7], [], [5, 4, 1], [], [16, 11, 2], [], [], [], [], [], [3, 12]]

@@ -6,8 +6,7 @@ B에 속한 어떤 수가 A에 들어있으면서, 동시에 탐색 과정에서
 '''
 
 import sys
-sys.stdin = open('input.txt')
-
+sys.stdin = open('sample_input.txt')
 def quick_sort(arr):
     # 1. 종료조건 설정
     if len(arr) <= 1:
@@ -26,39 +25,50 @@ def quick_sort(arr):
     # 3. 재귀 호출
     return [*quick_sort(left), *equal, *quick_sort(right)]
 
-def b_search(arr,target,start,end,middle):
+# target / start / end / middle
+def b_search(t,s,e,m):
     global cnt
-    dummy_cnt = 0
-    if cnt == 0 and arr[middle] == target:
+    # 예외처리
+    if s > e:
+        return
+    # 한번의 호출로 탐색이 완료된 경우
+    if sorted_A[middle] == t:
         cnt += 1
         return
-    # left = arr[:middle]
-    # right = arr[middle+1:]
-    # 우측 탐색
-    if target > arr[middle]:
-        start = middle + 1
-        b_search(arr,target,start,end,(end + start) // 2)
-        dummy_cnt += 1
-    # 좌측 탐색
-    elif target < arr[middle]:
-        end = middle
-        b_search(arr, target,start,end,(end + start) // 2)
-        dummy_cnt += 1
-    if dummy_cnt >= 2:
+    elif sorted_A[m] == t:
+        # 같은 방향을 2번 탐색하는 경우 함수 종료
+        if len(stack) >= 2 and stack[-1] == stack[-2]:
+            return
         cnt += 1
+        return
+    # 우측 탐색
+    if t > sorted_A[m]:
+        s = m + 1
+        # 우측을 방문했다는 표시
+        stack.append(1)
+        b_search(t,s,e,(e + s) // 2)
+
+    # 좌측 탐색
+    elif t < sorted_A[m]:
+        e = m - 1
+        # 좌측을 방문했다는 표시
+        stack.append(0)
+        b_search(t,s,e,(e + s) // 2)
 
 T = int(input())
 for tc in range(1,T+1):
     N,M = map(int,input().split())
     A = list(map(int,input().split())) # [1, 2, 3]
     B = list(map(int,input().split())) # [2, 3, 4]
-    sorted_A = quick_sort(A)
+    sorted_A = sorted(A)
     cnt = 0
+
     for elem in B:
         if elem in A:
+            stack = []
             start = 0
             end = len(sorted_A) - 1
             middle = (start + end) // 2
-            b_search(sorted_A,elem,start,end,middle)
+            b_search(elem,start,end,(start + end) // 2)
 
     print(f'#{tc} {cnt}')
