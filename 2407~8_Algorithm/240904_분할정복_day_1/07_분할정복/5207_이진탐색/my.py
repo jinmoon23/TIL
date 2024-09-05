@@ -37,7 +37,7 @@ def b_search(t,s,e,m):
         return
     elif sorted_A[m] == t:
         # 같은 방향을 2번 탐색하는 경우 함수 종료
-        if len(stack) >= 2 and stack[-1] == stack[-2]:
+        if len(stack) >= 3 and stack[-1] == stack[-2]:
             return
         cnt += 1
         return
