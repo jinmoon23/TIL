@@ -11,9 +11,6 @@ def dfs(sp):
     while True:
         if v[sp] == 0:
 
-
-
-
 test_case = 1
 V,E = map(int,input().split())
 paths = list(map(int,input().split()))

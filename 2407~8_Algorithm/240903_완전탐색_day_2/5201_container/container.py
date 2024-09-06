@@ -7,12 +7,31 @@
 '''
 
 import sys
+from collections import deque
 sys.stdin = open('sample_input.txt')
 
 T = int(input())
 for tc in range(1,T+1):
     N,M = map(int,input().split()) # 물건의 수 / 트럭의 수 -> 3 / 2
     c_lst = sorted(list(map(int,input().split())), reverse=True) # 물건의 무게를 담은 리스트 / [1,5,3]
-    M_lst = sorted(list(map(int,input().split())), reverse=True) # 트럭의 최대적재무게 / [8,3]
-    print(c_lst)
-    print(M_lst)
+    dummy = sorted(list(map(int,input().split())), reverse=True) # 트럭의 최대적재무게 / [8,3]
+    # popleft()를 활용해 사용이 완료된 트럭을 배제하기 위함
+    m_lst = deque(dummy)
+
+    res = 0
+
+    for c in c_lst:
+        for m in m_lst:
+            # 컨테이너 무게가 트럭의 최대적재무게보다 작거나 같다면 적재가 가능
+            if c <= m:
+                res += c
+                # 적재 완료 후 해당 트럭 계산에 배제
+                m_lst.popleft()
+                # 컨테이너의 적재 가능여부 더이상 판단하지 않아도 됨
+                break
+            # 내림차순 정렬되었기 때문에 앞에서 무게초과가 난다면 뒤를 더 보지않아도 된다.
+            else:
+                break
+
+    print(f'#{tc} {res}')
+
