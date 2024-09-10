@@ -5,42 +5,42 @@
 
 
 import sys
-from collections import deque
 sys.stdin = open('input.txt')
 
-def bfs(start):
+def dfs(start):
     v[start] = 1
-    q = deque()
-    q.append(start)
-
-    while q:
-        start = q.popleft()
-        for connect in connections[start]:
-            q.append(connect)
-        if v[start] == 1: continue
-        v[start] = 1
-        print(start)
-
+    for next_node in connections[start]:
+        if v[next_node] == 1: continue
+        dfs(next_node)
 
 T = int(input())
 for _ in range(T):
     N = int(input())
     computers = [list(map(int,input().split())) for _ in range(N)]
     v = [0] * N
+
     net_lst = []
     for i in range(N):
         for j in range(N):
             if i == j: continue
             if i > j: continue
+            # 연결되어 있다면 그 인덱스를 저장
             if computers[i][j] == 1 and computers[j][i] == 1:
                 net_lst.append([i,j])
-
+    print(net_lst)
+    # 상호 연결되어 있는 상태를 저장
     connections = [[] for _ in range(N)]
     for net in net_lst:
         s,e = net[0],net[1]
         connections[s].append(e)
         connections[e].append(s)
 
-    bfs(0)
-    print(net_lst)
     print(connections)
+
+    cnt = 0
+    for i,c in enumerate(v):
+        if c == 0:
+            # 인덱스 값으로 dfs 함수 호출
+            dfs(i)
+            cnt += 1
+    print(cnt)

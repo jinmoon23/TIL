@@ -8,13 +8,45 @@
 import sys
 sys.stdin = open('input.txt')
 
-def solution(begin, target, words):
-    if target not in words: return 0
+def solution(begin):
+    global cnt
+    # 1. 종료조건 설정
+    if begin == tar:
+        return
+    # 2. 재귀호출 전 동작 설정
+    # 문자열의 각 자리 char를 set에 모아서 하나씩 다 변환해서 비교하기
+    for i in range(len(begin)):
+        d_set = set()
+        for word in arr:
+            # 같은 char인 경우 early return
+            if word[i] == begin[i]: continue
+            d_set.add(word[i])
+        # 모여진 set값을 활용해 begin 인자 변환
+        for d in d_set:
+            comp = begin.replace(begin[i],d)
+            # 같으면 early return
+            if comp == begin: continue
+            # 이미 확인했던 char 또는 word early return
+            if d in used_lst: continue
+            if comp in used_lst: continue
 
+            if comp in arr:
+                used_lst.append(d)
+                used_lst.append(comp)
+                cnt += 1
+                #3. 재귀호출
+                solution(comp)
 
 T = int(input())
 for tc in range(1,T+1):
-    be, ta = map(str,input().split())
+    be, tar = map(str,input().split())
     arr = input().split()
-
-    solution(be,ta,arr)
+    cnt = 0
+    # 확인했던 값 확인하기 위한 리스트
+    used_lst = []
+    # 타겟 문자열이 입력 리스트에 존재하지 않으면 재귀호출을 시작할 이유가 없음
+    if tar not in arr:
+        print(cnt)
+    else:
+        solution(be)
+        print(cnt)
