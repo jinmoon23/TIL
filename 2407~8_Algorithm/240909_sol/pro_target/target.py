@@ -4,7 +4,6 @@ n개의 음이 아닌 정수들
 타겟 넘버를 만드는 방법의 수를 return 하도록 solution 함수를 작성
 '''
 
-
 import sys
 sys.stdin = open('input.txt')
 

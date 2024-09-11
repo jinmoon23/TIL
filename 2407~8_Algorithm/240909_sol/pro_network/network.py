@@ -8,9 +8,12 @@ import sys
 sys.stdin = open('input.txt')
 
 def dfs(start):
+    # 1. visited 배열과 if문에 의한 종료조건 설정
+    # 2. 재귀호출 전 동작 설정
     v[start] = 1
     for next_node in connections[start]:
         if v[next_node] == 1: continue
+        # 3. 재귀호출
         dfs(next_node)
 
 T = int(input())
@@ -27,16 +30,14 @@ for _ in range(T):
             # 연결되어 있다면 그 인덱스를 저장
             if computers[i][j] == 1 and computers[j][i] == 1:
                 net_lst.append([i,j])
-    print(net_lst)
+    print(net_lst) # [[0, 1]] -> 0번과 1번 컴퓨터는 상호 연결되어 있다.
     # 상호 연결되어 있는 상태를 저장
     connections = [[] for _ in range(N)]
     for net in net_lst:
         s,e = net[0],net[1]
         connections[s].append(e)
         connections[e].append(s)
-
-    print(connections)
-
+    print(connections) # [[1], [0], []] -> 0번 컴퓨터는 1번 컴퓨터와 연결되어 있고 1번 컴퓨터는 0번 컴퓨터와 연결되어 있다.
     cnt = 0
     for i,c in enumerate(v):
         if c == 0:

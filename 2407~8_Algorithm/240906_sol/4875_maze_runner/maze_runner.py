@@ -20,10 +20,12 @@ def is_maze_breaker(row,col):
             if maze[nx][ny] == '1': continue
             # 방문여부 확인
             if v[nx][ny] == 1: continue
+            # 종료조건 설정
             if maze[nx][ny] == '3':
                 return 1
 
             # 인덱스 에러 발생하지 않고 벽으로 막혀있지도 않은 경우 / 방문하지 않은 곳이라면
+
             # 여기서 방문구현 xx!!! 여기서 방문하면 안됨! 아래의 pop으로 실질적 이동 구현
             # row,col = nx,ny
 
@@ -46,5 +48,3 @@ for tc in range(1,T+1):
         for j in range(N):
             if maze[i][j] == '2':
                 print(f'#{tc} {is_maze_breaker(i,j)}')
-
-
