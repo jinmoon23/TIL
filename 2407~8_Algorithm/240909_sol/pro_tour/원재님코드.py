@@ -61,3 +61,6 @@ def solution(tickets):
             if not visited[keys][i]:    # 사용하지 않은 항공편이 있다면
                 answer.append(airport_dict[keys][i])    # 마지막으로 경로에 추가
     return answer
+
+# print(solution([["ICN", "JFK"], ["HND", "IAD"], ["JFK", "HND"]]))
+print(solution([["ICN", "AAA"], ["DDD", "ICN"], ["ICN", "DDD"]]))
