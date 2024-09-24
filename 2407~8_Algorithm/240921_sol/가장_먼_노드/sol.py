@@ -20,10 +20,11 @@ def solution(n, edge):
         res = []
         for elem in q:
             res.append(elem[1])
-        return res
+        max_les = max(res)
+        return res.count(max_les)
 
     res = bfs(1)
-    return len(res)
+    return res
 
 
 print(solution(6,[[3, 6], [4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]]))
