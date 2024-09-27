@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>CREATE</h1>
-    <form action="{% url "my_app:create" %}">
+    <form action="{% url "my_app:create" %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p}}
         <input type="submit" value='등록'>

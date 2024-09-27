@@ -8,5 +8,15 @@
 <body>
     <h1>안녕안녕</h1>
     <a href="{% url "my_app:create" %}">[CREATE]</a>
+    <ul>
+        {% for article in articles %}
+        <li>
+            <p>기사 제목: {{article.title}}</p>
+            {% if article.image %}
+            <img src="{{article.image.url}}" alt="대체이미지">
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

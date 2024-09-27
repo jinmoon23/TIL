@@ -1,16 +1,24 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .forms import MyAppForm
+from .models import Article
 
 # Create your views here.
 def index(request):
-    return render(request,'my_app/index.html')
+    articles = Article.objects.all()
+    context = {
+        'articles':articles,
+    }
+    return render(request,'my_app/index.html',context)
 
 def create(request):
     if request.method == 'POST':
-        pass
+        form = MyAppForm(request.POST, request.FILES)
+        if form.is_valid():
+            article = form.save()
+            return redirect('my_app:index')
     else:
         form = MyAppForm
     context = {
         'form': form,
     }
-    return render(request,'my_app/create',context)
+    return render(request,'my_app/create.html',context)
