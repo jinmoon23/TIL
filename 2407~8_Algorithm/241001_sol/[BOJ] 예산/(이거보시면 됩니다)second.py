@@ -40,7 +40,7 @@ def sol(N,arr,M):
     remainder = M - sum(receive_lst)
 
     # 추가적으로 배분이 불가능하거나 추가 배분 시 상한값을 넘어서는 경우 처리
-    if remainder <= 0 or (sum(arr) - M) * dummy > remainder:
+    if remainder <= 0:
         return max(receive_lst)
 
     # 차이를 확인하고 remainder를 재분배
@@ -52,6 +52,7 @@ def sol(N,arr,M):
             elem += diff
             receive_lst[index] = elem
         else:
+            if diff * dummy > remainder: continue
             elem += diff - remainder
             remainder -= diff - remainder
             receive_lst[index] = elem

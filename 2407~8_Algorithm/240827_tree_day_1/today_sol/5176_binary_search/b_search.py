@@ -17,8 +17,8 @@ sys.stdin = open('sample_input.txt')
 
 def make_tree(n):
     global cnt
-
-    if n < N+1: # N이 13인 경우 13번 노드까지는 완전 이진트리를 만들어야 하니 채워넣어야 하기 때문!
+    # N이 13인 경우 13번 노드까지는 완전 이진트리를 만들어야 하니 채워넣어야 하기 때문!
+    if n < N+1:
         make_tree(n*2)
         # 중위순회이기 때문에 이곳에 코드구성
         cnt += 1
@@ -31,5 +31,4 @@ for test_case in range(1, T + 1):
     tree = [0] * (N+1)
     cnt = 0
     make_tree(1)
-    print(tree)
     print(f'#{test_case} {tree[1]} {tree[N//2]}')
