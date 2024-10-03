@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>할 일 목록 관리 프로젝트</title>
+</head>
+<body>
+  <a href="{% url "todos:index" %}"><img src="{% static "logo.png" %}" alt="logo" width="30px" height="30px;"></a> | 
+  <a href="{% url "todos:create" %}">[CREATE]</a>
+  <a href="{% url "accounts:login" %}">[LOGIN]</a>
+  {% comment %} #3. logout을 위한 form 태그 작성 {% endcomment %}
+  <form action="{% url "accounts:logout" %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="[LOGOUT]">
+  </form>
+  {% comment %} 5. settings.py에 이미 등록된 user 를 활용, 로그인 된 유저의 정보를 나타낼 수 있다. {% endcomment %}
+  <h2>Hello, {{user.username}}</h2>
+  <a href="{% url "diaries:index" %}">[DIARY]</a>
+  {% block content %}
+  {% endblock content %}
+</body>
+</html>
