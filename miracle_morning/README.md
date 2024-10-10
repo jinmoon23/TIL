@@ -158,3 +158,16 @@
 |토요일|:muscle:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:muscle:|
 |일요일|:muscle:|:muscle:|:muscle:|:pray:|:pray:|:muscle:|:pray:|:pray:|:muscle:|:muscle:|:pray:|:muscle:|
 |달성여부|달성!|1회 초과 달성!!|1회 초과 달성!!|**2회 미달**|**1회 미달**|달성!|**1회 미달**|**1회 미달**|달성!|달성!|**1회 미달**|달성!|
+
+
+|10월1주차|최진문|박수민|하건수|김경민|이혜령|이가람|도경원|송지영|양불회 프로님|송동현|장은정|손채이|김원겸|이지연|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|목표|수영 주6회|헬스 주3회|헬스 주3회|헬스 주3회|헬스 주3회|헬스 주3회|헬스 주3회|러닝 주3회|러닝 주3회|헬스 주3회|헬스 주2회|러닝 주2회|헬스 주3회|수영 주3회|
+|월요일|:muscle:|:pray:|:muscle:|:pray:|:pray:|:muscle:|:muscle:|:pray:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|
+|화요일|:pray:|:pray:|:muscle:|:muscle:|:muscle:|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|
+|수요일|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:muscle:|:pray:|:pray:|:muscle:|:pray:|
+|목요일|:muscle:|:pray:|:muscle:|:pray:|:pray:|:muscle:|:muscle:|:pray:|:pray:|:pray:|:muscle:|:pray:|:muscle:|:pray:|
+|금요일|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|
+|토요일|:muscle:|:pray:|:muscle:|:pray:|:pray:|:pray:|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:muscle:|:pray:|:pray:|
+|일요일|:muscle:|:pray:|:pray:|:pray:|:pray:|:muscle:|:pray:|:pray:|:muscle:|:pray:|:pray:|:muscle:|:muscle:|:pray:|
+|달성여부|달성!|**3회 미달**|1회 초과 달성!!|**2회 미달**|**2회 미달**|1회 초과 달성!!|1회 초과 달성!!|**1회 미달**|**2회 미달**|1회 초과 달성!!|**1회 미달**|달성!|달성!|이번주 **깍두기**|
