@@ -8,5 +8,20 @@
   <p>생년월일 : {{ author.birth }}</p>
   <p>국적 : {{ author.nationality }}</p>
   <hr>
+  <h1>신규 도서 등록</h1>
+  <form action="{% url "libraries:books_create" author.pk %}" method="POST">
+    {% csrf_token %}
+    {{book_create_form.as_p}}
+    <input type="submit" value="책 등록">
+  </form>
+  <h1>도서 목록</h1>
+  <ul>
+    {% for book in author.book_set.all %}
+    <li>제목 : {{book.title}}</li>
+    {% empty %}
+    <p>도서 목록이 비어있습니다. 추가해 주세요.</p>
+    {% endfor %}
+  </ul>
   <a href="{% url 'libraries:index' %}">[BACK]</a>
+  
 {% endblock content %}
