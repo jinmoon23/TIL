@@ -182,4 +182,4 @@
 |금요일|:muscle:|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|
 |토요일|:pray:|:pray:|:pray:|:pray:|:pray:|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|
 |일요일|:pray:|:muscle:|:muscle:|:pray:|:pray:|:muscle:|:pray:|:pray:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|
-|달성여부|2회 미달**건강이슈**|달성!|**1회 미달**|**1회 미달**|**1회 미달**|달성!|1회 초과 달성!!|달성!|**1회 미달**|달성!|달성!|2회 미달**건강이슈**|**2회 미달**|달성!|
+|달성여부|2회 미달**건강이슈**|달성!|**1회 미달**|**1회 미달**|**1회 미달**|달성!|1회 초과 달성!!|달성!|**1회 미달**|달성!|달성!|2회 미달**건강이슈**|**1회 미달**|달성!|
