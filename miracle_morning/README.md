@@ -177,9 +177,9 @@
 |목표|수영 주6회|헬스 주3회|헬스 주3회|헬스 주3회|헬스 주3회|헬스 주3회|헬스 주3회|러닝 주3회|러닝 주3회|헬스 주3회|헬스 주2회|러닝 주2회|헬스 주3회|수영 주3회|
 |월요일|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|:muscle:|:muscle:|:pray:|:muscle:|:muscle:|:pray:|:muscle:|:muscle:|
 |화요일|:muscle:|:muscle:|:pray:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|
-|수요일|:pray:|:pray:|:pray:|:muscle:|:pray:|:pray:|:muscle:|:muscle:|:muscle:|:pray:|:pray:|:pray:|:pray:|:muscle:|
+|수요일|:pray:|:pray:|:pray:|:muscle:|:pray:|:pray:|:muscle:|:muscle:|:muscle:|:pray:|:pray:|:pray:|:muscle:|:muscle:|
 |목요일|:muscle:|:pray:|:muscle:|:muscle:|:muscle:|:muscle:|:muscle:|:pray:|:pray:|:pray:|:muscle:|:pray:|:pray:|:muscle:|
 |금요일|:muscle:|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|
 |토요일|:pray:|:pray:|:pray:|:pray:|:pray:|:muscle:|:muscle:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|
 |일요일|:pray:|:muscle:|:muscle:|:pray:|:pray:|:muscle:|:pray:|:pray:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|
-|달성여부|2회 미달**건강이슈**|달성!|**1회 미달**|**1회 미달**|**1회 미달**|달성!|1회 초과 달성!!|달성!|**1회 미달**|달성!|달성!|2회 미달**건강이슈**|**2회 미달**|달성!|
+|달성여부|2회 미달**건강이슈**|달성!|**1회 미달**|**1회 미달**|**1회 미달**|달성!|1회 초과 달성!!|달성!|**1회 미달**|달성!|달성!|2회 미달**건강이슈**|**1회 미달**|달성!|
