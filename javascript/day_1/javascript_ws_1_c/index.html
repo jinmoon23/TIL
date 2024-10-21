@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .article {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #f9f9f9;
+    }
+    .content {
+      border-top: 1px solid black;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+  </div>  
+  <script>
+    // 아래에 코드 작성
+    // 1. div 태그 내부에 div 태그를 추가하기
+    const parentDivTag = document.querySelector('#container')
+    console.log(parentDivTag)
+    const childDivTag = document.createElement('div')
+    parentDivTag.appendChild(childDivTag) 
+    childDivTag.classList = 'article'
+
+    // 2. childDivTag 내부에 h1tag 추가하기
+    const h1Tag = document.createElement('h1')
+    h1Tag.textContent = 'Article Title'
+    childDivTag.appendChild(h1Tag)
+
+    // 3. childDivTag 내부에 ptag 추가하기
+    const pTag = document.createElement('p')
+    pTag.textContent = 'This is a article content'
+    pTag.classList = 'content'
+    childDivTag.appendChild(pTag)
+
+
+  </script>
+</body>
+
+</html>
