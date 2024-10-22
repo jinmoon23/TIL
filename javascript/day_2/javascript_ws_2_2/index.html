@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 동등 연산자를 활용한 조건문
+    if (0 == []) {
+      console.log('true?')
+    } else {
+      console.log('false?')
+    }
+    // 실행 결과 : true?
+
+    // 일치 연산자를 활용한 조건문
+    if ({} === false) {
+      console.log('true?')
+    } else {
+      console.log('false?')
+    }
+    // 실행 결과 : false?
+    // This condition will always return 'false'
+    // since JavaScript compares objects by reference,
+    // not value.
+
+    // 논리 연산자를 활용한 단축 평가
+    console.log(0 && 13)
+    // 실행 결과 : false -> 0
+    console.log(0 || 13)
+    // 실행 결과 : true -> 13
+
+    let num = 12
+    num /= 3
+    console.log(num)
+    // 실행 결과 : 4(let 선언이라 재할당 가능)
+
+    const number = 13
+    number++ 
+    console.log(number)
+    // 실행 결과 : const는 재할당이 불가능. 에러발생
+  </script>
+</body>
+</html>

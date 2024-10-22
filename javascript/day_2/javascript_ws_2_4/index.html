@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const roles = ['주연배우', '조연배우', '주연배우', '우정출연', '우정출연', '조연배우']
+    const names = ['홍길동', '이춘향', '금나래', '장보고', '임꺽정', '강감찬']
+    // 1. LENGTH를 구하기 위해 for문을 사용
+    let roles_length = 0
+    let names_length = 0
+    for (const element of roles) {
+      roles_length += 1
+    }
+    for (const element of names) {
+      names_length += 1
+    }
+    // 2. 동일한 인덱스의 값을 함께 출력
+    for (let i = 0;i < roles_length; i++) {
+      if (roles[i] === '주연배우') {
+        console.log(`${roles[i]} : ${names[i]}님 반갑습니다!`)
+      } else if (roles[i] === '조연배우') {
+        console.log(`${names[i]}님 환영합니다!`)
+      } else if (roles[i] === '우정출연') {
+        console.log(`${roles[i]} : ${names[i]}님 와 주셔서 감사합니다!`) 
+      }
+    }
+  </script>
+</body>
+</html>
