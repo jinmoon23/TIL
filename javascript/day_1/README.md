@@ -12,6 +12,3 @@ let vs const
 
 ## var
 TDZ: 초기화 전에 접근할 수 없다!
-
-
-

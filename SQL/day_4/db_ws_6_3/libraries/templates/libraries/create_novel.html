@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>소설 생성</h1>
+<form action="{% url "libraries:create_novel" %}" method ="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="생성하기">
+</form>
+{% endblock content %}

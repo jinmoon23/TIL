@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    {% if user.isAuthenticated %}
+    {% if user.is_authenticated %}
     <h2>{{user.username}}님 반갑습니다!</h2>
     <form action="{% url "accounts:logout" %}" method="POST">
         {% csrf_token %}
