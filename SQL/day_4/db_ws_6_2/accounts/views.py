@@ -3,9 +3,13 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
 from .forms import CustomUserCreationForm
+
+
 # Create your views here.
 def login(request):
     if request.method == 'POST':
+        # 왜일까..? AuthenticationForm 에는 인자로 request가 들어간다.
+        # 회원가입과의 차이점으로 기억해두자
         form = AuthenticationForm(request,request.POST)
         if form.is_valid():
             # 회원가입과 다른 점을 기억하자

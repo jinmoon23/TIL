@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{person.username}}님의 프로필페이지 입니다!</h1>
+{% if person.email %}
+    <p>{{person.email}}</p>
+{% else %}
+    <p>아직 이메일을 작성하지 않으셨어요!</p>
+    <p>왜 아직 안하셨나요?? 빨리 등록하세요!</p>
+{% endif %}
+
+<hr>
+{% if person == request.user %}
+<a href="{% url "accounts:update" %}">[USER_UPDATE]</a>
+<form action="{% url "accounts:delete" %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="[SIGNOUT]">
+</form>
+<hr>
+{% endif %}
+
+<h3>{{person.username}}님이 선택한 Diarys</h3>
+<ul>
+    {% for diary in person.like_diaries.all %}
+    <li>{{diary.content}}</li>
+    {% if diary.picture %}
+    <img src="{{diary.picture.url}}" alt="{{diary.picture}}">
+    {% endif %}
+    {% empty %}
+    <p>좋아요한 다이어리가 없습니다.</p> 
+    {% endfor %}
+</ul>
+{% endblock content %}

@@ -214,3 +214,64 @@
 - 링 형태의 토폴로지 네트워크 / `충돌이 없다`
 
 FDDI: 미국 ANSI(미국국가`표준`협회)에서 표준화한 프로토콜. 토큰패싱 접근법을 이용.
+
+## OSI 계층
+
+### 개요
+1. OSI란? Open System Interconnection, 개방형 시스템 간의 상호접속
+2. ISO에서 제정. 개방형 시스템에서 `서로 다른 네트워크`에 속한 디바이스들이 다양한 상황에 `관계없이 항상 같은 형태`로 데이터를 교환할 수 있도록 정한 국제표준. 
+3. 7Layers   계층       /   데이터 단위  / 사용 디바이스  
+  - 1 Layer: 물리 계층 / Reapeater, Hub / Bit
+  - 2 Layer: 데이터 링크 계층 / Bridge, Switch / Frame
+  - 3 Layer: 네트워크 계층 / Router, Layer 3 Switch / Packet or Datagram
+  - 4 Layer: 전송 계층 / / Record or Segment or Segment or Gateway
+  - --------------------------------------------------------------------- ↑ 운영체제 내부에서 데이터 전송을 다룸
+  - 5 Layer: 세션 계층 / / SoftWare Gateway
+  - 6 Layer: 표현 계층 / / SoftWare Gateway
+  - 7 Layer: 응용 계층 / / SoftWare Gateway
+  - 7 Layer이 가장 일반 사용자와 가까운 계층.
+4. 계층화의 장점
+  - 각 계층의 독립성 보장
+  - 독립성으로 인해 오류 대응 용이
+5. 계층별 특징
+  1. 1 Layer(물리 계층)
+    - 물리적 장비
+    - 비트(0or1) 기반 데이터 전송
+    - 주요장비: 케이블 / 허브 / 리피터(전송거리가 먼 경우 증폭용도로 활용)
+  2. 2 Layer(데이터 링크 계층)
+    - 송수신을 `확인`하여 정보 교환이 가능한지`(오류 검출 / 흐름 제어)` 검사
+    - `네트워크 계층(3 Layer)`에서 붙은 IP헤더를 활용, `Mac Address`를 구해 송수신자의 주소를 파악.
+  3. 3 Layer(네트워크 계층)
+    - 송수신자 간 `경로`를 설정, 목적지까지 정보를 전달.
+    - 논리적 주소를 물리적 주소로 `변환`
+    - 2 Layer(데이터 링크 계층)와 달리 네트워크 주소`(IP주소)`까지 참조하여 `최적경로`를 설정 
+    - 주요 프로토콜
+      - IP(Internet Protocol)
+      - ICMP(Internet Control Message Protocol)
+      - IGMP(Internet Group Message Protocol)
+      - ARP(Address Resolution Protocol): 주소를 알아내는 프로토콜
+      - RARP(Reverse Address Resolution Protocol)
+  4. 4 Layer(전송 계층)
+    - 송수신자 간 `논리적 연결`을 담당하는 계층
+    - 오류가 없는지 검출
+    - 주요 프로토콜
+      - TCP(Transmission Control Protocol)
+      - UDP(User Datagram Protocol)
+        - Datagram? 패킷의 일종으로 송수신자간 경로 지정을 위한 정보를 포함함.
+      - SCTP(Stream Control Transmission Protocol) 
+  5. 5 Layer(세션 계층)
+    - 송수신자간 통신을 위한 `동기화 신호를 교환`하여 연결 세션을 구축 / 유지 / 설정 / 종료함
+      - 동기화 신호? 제대로된 정보 처리를 위해 통신 양측이 공통된 시작점을 합의하는 것.
+      - 재동기? 동기점을 이용하여 전송 오류를 복구하는 것.
+    - 해당 계층에서 세션의 연결 방식(단방향 / 반이중 / 전이중)을 결정한다. 
+  6. 6 Layer(표현 계층)
+    - 앱에서 보내온 메시지를 전송 가능한 형태로 변환(코드화)
+    - 데이터를 변환한다고 하여 문맥 계층이라고도 부름.
+    - `암호화`를 직접적으로 수행하는 계층
+  7. 7 Layer(응용 계층)
+    - 앱 차원에서 송수신 데이터가 사용할 수 있는 통로를 제공(`추상화`)
+    - 정보의 단위: Message
+    - 주로 사용되는 프로토콜
+       - HTTP: 인터넷 통신을 위한
+       - FTP: 파일 전송을 위한
+       - SMTP: 메일 발송을 위한

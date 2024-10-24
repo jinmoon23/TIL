@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const user = {
+      name: 'Alice',
+      'key with space': true,
+      greeting: function () {
+        return 'Hello!'
+      }
+    }
+
+    // 조회
+    console.log(user.name) // Alice
+    console.log(user['key with space']) // true
+
+    // 추가
+    // 별다른 메서드가 없이 가능
+    user.address = 'korea'
+    console.log(user.address) // {name: 'Alice', key with space: true, address: 'korea', greeting: ƒ}
+
+    // 수정
+    // 추가와 동일하게 별다른 메서드 없이 가능하며
+    user.name = 'Bella'
+    console.log() // Bella
+
+    // 삭제
+    // 추가,수정과 달리 삭제의 경우 메서드가 존재
+    delete user.name
+    console.log(user) // {key with space: true, address: 'korea', greeting: ƒ}
+
+    // in 연산자
+    // 객체 내에 해당하는 key가 있는지 확인
+    console.log('greeting' in user) // true
+    console.log('korea' in user) // false
+
+    // 메서드 호출
+    // `this` 키워드를 사용하는 경우 어디를 가르키느냐?
+    // 바로 user
+    console.log(user.greeting()) // hello
+  </script>
+</body>
+
+</html>
