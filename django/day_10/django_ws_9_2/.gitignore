@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/python,macos,django
-# Edit at https://www.toptal.com/developers/gitignore?templates=python,macos,django
+# Created by https://www.toptal.com/developers/gitignore/api/django,macos,python
+# Edit at https://www.toptal.com/developers/gitignore?templates=django,macos,python
 
 ### Django ###
 *.log
@@ -296,4 +296,4 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 
-# End of https://www.toptal.com/developers/gitignore/api/python,macos,django
+# End of https://www.toptal.com/developers/gitignore/api/django,macos,python
