@@ -24,7 +24,6 @@ def article_list(request):
         # 유효성 검사 실패 후 400 상태 코드 반환
         # return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
     
-'__all__'
 @api_view(['GET','DELETE','PUT'])
 def article_detail(request, article_pk):
     article = Article.objects.get(pk=article_pk)
@@ -37,6 +36,7 @@ def article_detail(request, article_pk):
         return Response(status=status.HTTP_204_NO_CONTENT)
     elif request.method == 'PUT':
         # partial -> 부분 업데이트를 허용하도록 하는 인자
+        # instance가 필요 없다!
         serializer = ArticleSerializer(article,data=request.data,partial=True)
         # raize_exception=True 하면 가장 아래의 코드를 안 적어도 됨!
         if serializer.is_valid(raise_exception=True):

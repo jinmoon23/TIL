@@ -7,12 +7,12 @@
 요즘은 다~ open API를 활용해서 개발을 한다 이말이다~!
 ## API Server 설계의 방법론 == REST
 REST: Representational State Transfer
-**자원을 정의**하고 자원에 대한 **주소를 지정**하는 전반적인 방법 서술
+**자원을 정의**하고 자원에 대한 **주소를 지정**하는 전반적인 `방법` 서술
 
 자원을 정의?
-- 자원의 식별: URI
-- 자원의 행위: HTTP METHOD
-- 자원의 표현: JSON DATA
+- 자원의 `식별`: URI
+- 자원의 `행위`: HTTP METHOD
+- 자원의 `표현`: JSON DATA
 
 자원의 식별?
 - URI: 통합 자원 **식별자** -> 통상적으로 url
@@ -29,4 +29,3 @@ REST: Representational State Transfer
 - Read / Create / Update / Delete
 
 자원의 표현?
- 
