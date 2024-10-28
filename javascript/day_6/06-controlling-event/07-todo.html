@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" class="input-text">
+  <button id="btn">+</button>
+  <ul></ul>
+
+  <script>
+    // 1. 필요한 요소 선택
+    const inputTag = document.querySelector('.input-text')
+    const btnTag = document.querySelector('#btn')
+    const ulTag = document.querySelector('ul')
+
+    // 2. 콜백 함수 -> 실제 todo 데이터를 생성 후 추가하는 로직
+    // const addTodo = function (event) {
+    //   // 2.1 inputTag 내부의 사용자 입력 데이터 저장
+    //   const inputData = inputTag.value
+    //   // 2.2 list 태그를 생성하여 2.1의 데이터를 넣기
+    //   const listTag = document.createElement('li')
+    //   // 2.3 li 태그의 텍스트 컨텐츠에 2.1의 텍스트 데이터 넣기
+    //   listTag.textContent = inputData
+    //   // console.log(listTag)
+    //   // 2.4 ul 태그의 자식 태그로 추가하기
+    //   ulTag.appendChild(listTag)
+    //   // 2.5 todo 추가 후 input 데이터 초기화
+    //   inputTag.value = ''
+    // }
+    
+    // 심화버전!
+    const addTodo = function (event) {
+      // 2.1 inputTag 내부의 사용자 입력 데이터 저장
+      const inputData = inputTag.value
+      if (inputData.trim()) {
+        // 2.2 list 태그를 생성하여 2.1의 데이터를 넣기
+        const listTag = document.createElement('li')
+        // 2.3 li 태그의 텍스트 컨텐츠에 2.1의 텍스트 데이터 넣기
+        listTag.textContent = inputData
+        // console.log(listTag)
+        // 2.4 ul 태그의 자식 태그로 추가하기
+        ulTag.appendChild(listTag)
+        // 2.5 todo 추가 후 input 데이터 초기화
+        inputTag.value = ''
+      } else {
+        alert('todo를 입력해주세요.')
+      }
+      
+    }
+    // 3. 버튼태그에 이벤트리스너 부착하기
+    btnTag.addEventListener('click',addTodo)
+  </script>
+</body>
+
+</html>

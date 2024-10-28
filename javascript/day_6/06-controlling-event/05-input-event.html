@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 사용자의 입력값을 받는 곳 -->
+  <input type="text" id="text-input">
+  <!-- 사용자의 입력값을 보여주는 곳 -->
+  <p></p>
+
+  <script>
+    // 1. input 요소를 선택(여기서 입력 이벤트가 발생한다.)
+    const inputTag = document.querySelector('#text-input')
+    // 2. p태그(실시간으로 입력값을 보여줄 태그) 선택
+    const pTag = document.querySelector('p')
+    // 3. 콜백함수 -> input 요소에 이벤트가 발생할 때마다 실행할 동작 정의
+    const inputHander = function (event) {
+      // console.log(event)
+      // // 이벤트 리스너가 부착된 녀석
+      // console.log(event.currentTarget)
+      // // 위와 동일한 코드
+      // console.log(this)
+
+      // input에 누적되는 데이터가 저장된 value에 접근
+      // console.log(event.currentTarget.value)
+      // this == currentTarget 이기 때문에 아래의 코드도 정상 동작한다. 
+      // console.log(this.value)
+      const inputData = event.currentTarget.value
+      // 실시간으로 누적되고 변경되는 그 값을 pTag의 텍스트 컨텐츠로 함
+      pTag.textContent = inputData
+    }
+    // 4. 선택한 input 요소에 이벤트 리스너 부착
+    inputTag.addEventListener('input',inputHander)
+
+  </script>
+</body>
+
+
+</html>
