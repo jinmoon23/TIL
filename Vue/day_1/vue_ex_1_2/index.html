@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>{{count}}</h1>
+    <button v-on:click="increment">+</button>
+    <button v-on:click="decrement">-</button>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp, ref } = Vue
+
+    const app = createApp({
+      setup() {
+        // 제일 중요!! ref() 메서드는 객체를 반환함!
+        let count = ref(0)
+        const increment = () => {
+          // 값을 증가시키고자 할때도 객체의 value 속성에 접근해야 함.
+          count.value++
+        }
+        const decrement = () => {
+          count.value--
+        }
+        return {
+          count,
+          increment,
+          decrement,
+        }
+      }
+    })
+    app.mount('#app')
+  </script>
+</body>
+
+</html>
