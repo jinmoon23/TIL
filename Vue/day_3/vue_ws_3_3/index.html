@@ -28,7 +28,7 @@
     <ul v-for="display in displaysInfo" :key="display.id">
       <!-- 만약 display.price의 가격이 ~~라면 li 태그에 클래스를 추가해야 한다. -->
       <!-- 어떻게 하면 좋을까.. -->
-      <li>
+      <li :class="activeClass(display.price)">
         <h3> {{display.title}} </h3>
         <hr>
         <p> {{display.location}} </p>
@@ -90,16 +90,32 @@
           isActive: false,
           status: '전시 종료'
         }])
-
         const activeDisplays = computed(() => {
           return displaysInfo.value.filter((display) => {
             return display.isActive
           })
         })
+
+        const isCheap = ref(false)
+        const isExpensive = ref(false) 
+
+        const activeClass = function (price) {
+          if (price<=5000) {
+            console.log(price)
+            return 'cheap'
+          } else if (price>20000) {
+            console.log()
+            return 'expensive'
+          } else {
+            return ''
+          }
+        }
+        
         return {
           displaysInfo,
           isActive,
           activeDisplays,
+          activeClass
         }
       }
     })
