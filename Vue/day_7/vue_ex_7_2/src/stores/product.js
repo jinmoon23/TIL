@@ -19,6 +19,7 @@ export const useProductStore = defineStore('product', () => {
     return products.value.length
   })
 
+  // const stockProduct = computed (() => products.value.length)
   return { 
     products,
     deleteProduct,
