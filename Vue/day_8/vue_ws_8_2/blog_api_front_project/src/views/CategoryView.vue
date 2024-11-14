@@ -1,11 +1,13 @@
 <template>
     <div>
-      <h1>OO의 블로그입니당</h1>
+      카테고리 이름: {{ category.name }}
     </div>
 </template>
 
 <script setup>
-
+defineProps({
+  category:Object
+})
 </script>
 
 <style scoped>
