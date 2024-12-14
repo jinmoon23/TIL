@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .font-crimson {
+      color: crimson;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="heading">Hover me!</h1>
+  <h2 class="sub-heading">Double Click me!</h2>
+  <p class="contents">Lorem ipsum dolor sit amet consectetur</p>
+
+  <script>
+    const randomTexts = [
+      'Lorem ipsum dolor sit amet consectetu',
+      'adipisicing elit. Repellendus delectus quam',
+      'similique quo ipsam maxime totam alias',
+      'quibusdam repudiandae voluptas dicta',
+      'voluptas voluptatibus exercitationem officiis'
+    ]
+
+    // 아래에 코드 작성
+    // 1. 필요한 요소 선택
+    const h1Tag = document.querySelector('h1')
+    const h2Tag = document.querySelector('h2')
+    const pTag = document.querySelector('p')
+    // 2. 콜백 함수 로직 정의
+    const mouseover = function (event) {
+      h1Tag.textContent = "I am Being Hovered"
+    }
+    const mouseout = function (event) {
+      h1Tag.textContent = 'Hover me!'
+    }
+    const doubleclick = function (event) {
+      h2Tag.classList.toggle('font-crimson')
+    }
+    const randomWord = function (event) {
+      // Math.random()은 0<= x < 1 의 임의의 수를 리턴함
+      // 인덱스를 구하기 위해 해당 배열의 길이를 곱하고
+      // Math.floor() 메서드로 내림을 진행 
+      const result = randomTexts[Math.floor(Math.random() * randomTexts.length)]
+      pTag.textContent = result
+    }
+    // 3. 이벤트 리스너 부착
+    h1Tag.addEventListener('mouseover',mouseover)
+    h1Tag.addEventListener('mouseout',mouseout)
+    h2Tag.addEventListener('dblclick',doubleclick)
+    pTag.addEventListener('wheel',randomWord)
+  </script>
+</body>
+
+</html>

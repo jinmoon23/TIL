@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>{{message}}</h1>
+    <!-- 이 한 줄로 반응형 버튼 구현이 완료됨 -->
+    <button v-on:click="countNumber++">
+      카운트 넘버: {{countNumber}}
+    </button>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    // 1. 구조 분해 할당으로 메서드 받아옴
+    // ref == 반응형 상태(데이터)를 선언하는 함수
+    const {createApp, ref} = Vue
+    // 2. createApp 메서드는 객체를 인자로 받는다 
+    const app = createApp({
+      // 3. 메서드 설정하는 것을 단축해서 표현
+      // setup : function() {} 와 동일
+      setup() {
+        const message = ref('Hello Vue!')
+        const countNumber = ref(0) 
+        // 4. setup() 메서드는 객체를 반환함
+        return  {
+          // message: message 와 동일
+          // 단축 표현임!
+          message,
+          countNumber,
+        }
+      }
+    })
+    // 5. mount 메서드로 Vue app 생성
+    app.mount('#app')
+  </script>
+</body>
+
+</html>

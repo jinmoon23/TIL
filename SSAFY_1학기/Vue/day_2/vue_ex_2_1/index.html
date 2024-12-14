@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .text-crimson {
+      color: crimson;
+    }
+
+    .text-decorate {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <h1 :class="colorCrimson">Heading</h1>
+    <p :class="computedDecorateText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, ipsum.</p>
+    <button @click="toggleDecorate">Toggle Text Style</button>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp, ref, computed } = Vue
+
+    const app = createApp({
+      setup() {
+        const isDecorate = ref(false)
+        const colorCrimson = ref('text-crimson')
+        const decorateText = ref('')
+
+        const computedDecorateText = computed (() => {
+          if (isDecorate.value) {
+            return decorateText.value = 'text-decorate'
+          }
+        })
+        const toggleDecorate = function () {
+          isDecorate.value = !isDecorate.value
+          console.log(isDecorate.value)
+        }
+        
+        return {
+          colorCrimson,
+          isDecorate,
+          toggleDecorate,
+          decorateText,
+          computedDecorateText
+        }
+      }
+    })
+    app.mount('#app')
+  </script>
+</body>
+
+</html>

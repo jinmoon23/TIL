@@ -1,0 +1,40 @@
+<!-- spread-syntax.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1. 인자 확장 (함수 호출 시)
+    let numbers = [1, 2, 3]
+    let numbers2 = [1, 2]
+    function myFunc(x, y, z) {
+      return x + y + z
+    }
+    // ...를 사용하지 않은 경우
+    console.log(myFunc(numbers[0],numbers[1],numbers[2]))
+    // ...를 사용한 경우
+    // ... 구문의 인자 확장
+    console.log(myFunc(...numbers))
+    // 불일치를 허용하긴 했지만 부족한 인자를 undefined로 처리함
+    // 따라서 해당 코드 실행 시 NaN이 출력됨(숫자 + undefined 이니까!)
+    console.log(myFunc(...numbers2))
+
+
+    // 2. 나머지 매개변수 (함수 선언 시)
+    // ... 구문의 매개변수 압축
+    const myFunc2 = function (params1,params2,...restparams) {
+      return [params1,params2,restparams]
+    }
+    console.log(myFunc2(1, 2, 3, 4, 5)) // [1, 2, [3, 4, 5]]
+    console.log(myFunc2(1, 2)) // [1, 2, []]
+  </script>
+</body>
+
+</html>

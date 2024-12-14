@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 함수 선언식
+    function add(num1, num2) {
+      return num1 + num2
+    }
+    console.log(add(3, 9))
+    // 함수 표현식
+    const sub = function (num1, num2) {
+      return num2 - num1
+    }
+    console.log(sub(3, 9))
+    // 기본 함수 매개변수
+    const greeting = function (name='Anonymous') {
+      return `Hi, ${name}`
+    }
+    // 함수 호출 시 인자를 설정하지 않아도 동작이 됨.
+    // 기본값을 설정했기 때문
+    console.log(greeting())
+
+    // 나머지 매개변수 (가변 인자)
+    // ... === 파이썬의 *  
+    const myFunc = function (params1,params2,...restparams) {
+      return [params1,params2,restparams]
+    }
+    console.log(myFunc(1, 2, 3, 4, 5))
+    console.log(myFunc(1, 2))
+
+
+    // JS는 매개변수와 인자의 개수 불일치를 허용
+    // 1. 매개변수 개수 > 인자 개수
+    const threeArgs = function (num1, num2, num3) {
+      return [num1, num2, num3]
+    }
+    // 인자가 부족하거나 없으면 undefined로 인입됨
+    // 다른 프로그래밍 언어와 달리 에러를 발생시키지 않는 이유
+    // 애초에 자바스크립트는 프로그래밍 언어로 시작한것이 아님!
+    console.log(threeArgs())
+    console.log(threeArgs(1))
+    console.log(threeArgs(1,2))
+
+    // 2. 매개변수 개수 < 인자 개수
+    const noArgs = function () {
+      return 0
+    }
+    // 강제로 인자를 인입한 경우
+    // 에러가 발생하지 않고 적절히 리턴값을 보여줌.
+    // 그냥 무시했다!
+    console.log(noArgs(1,2,3))
+    const twoArgs = function (num1, num2) {
+      return [num1, num2]
+    }
+    // 마찬가지로 초과 인입된 인자에 대해 무시함!
+    // 결론: 인자의 불일치를 인정함
+    console.log(twoArgs(1,2,3,4))
+  </script>
+</body>
+
+</html>

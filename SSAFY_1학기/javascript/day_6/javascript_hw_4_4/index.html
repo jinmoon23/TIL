@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .done {
+      text-decoration: line-through;
+    }
+    .strike-through {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <form action="/todos/">
+    <input type="text">
+    <button>Todo</button>
+  </form>
+  <ul></ul>
+
+<script>
+  const form = document.querySelector('form')
+  const inputTag = document.querySelector('input')
+  const ulTag = document.querySelector('ul')
+  function addTodo (event) {
+    // 이벤트를 취소한다.
+    // 폼 제출(submit)의 기본 동작은 페이지를 새로고침하거나 다른 페이지로 이동하는 것
+    // 페이지 새로고침 없이 동적으로 콘텐츠를 업데이트하고자 할 때 사용
+    event.preventDefault()
+
+    // 입력 element를 찾고 해당 입력 element의 value 값을 저장한다.
+    console.log(event.target[0].value)
+    let todo = event.target[0].value
+
+
+    // li element를 생성 후 input element의 value 값을 데이터로 저장한다
+    const liTag = document.createElement('li')
+    liTag.textContent = todo
+
+    // ul 태그의 자식 태그로 위에서 생성한 li element를 넣는다.
+    ulTag.appendChild(liTag)
+    // 입력 후 사용자 편의를 위해 기존의 입력값을 제거함
+    inputTag.value = ''
+
+    // 삭제 버튼을 생성 후 li 태그의 자식 태그로 넣는다.
+    const deleteBtn = document.createElement('button')
+    deleteBtn.textContent = 'X'
+    liTag.appendChild(deleteBtn)
+
+    // 삭제 버튼을 클릭하면 해당 li element를 삭제한다
+    const deleteTodo = function (event) {
+      event.target.parentNode.remove()
+    }
+    deleteBtn.addEventListener('click',deleteTodo)
+
+    // li element를 클릭하면 취소선이 토글된다.
+    const strikeThrough = function (event) {
+      liTag.classList.toggle('strike-through')
+    }
+    liTag.addEventListener('click',strikeThrough)
+  }
+  
+  form.addEventListener('submit', addTodo)
+  
+</script>
+</body>
+</html>

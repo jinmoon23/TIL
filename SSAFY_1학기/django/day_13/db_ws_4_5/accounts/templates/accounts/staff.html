@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>관리자 여부 수정</h1>
+<form action="{% url "accounts:staff" %}">
+    {% csrf_token %}
+    {{staff_form.as_p}}
+    <input type="submit" value="수정하기">
+</form>
+{% endblock content %}
