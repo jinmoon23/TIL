@@ -8,31 +8,40 @@
 4.
 '''
 from collections import deque
-from os import access
-
-
 def solution(bridge_length, weight, truck_weights):
-    truck_weights = deque(truck_weights)
-    across_bridge = []
+    wait_trucks = deque(truck_weights)
+    trucks = len(wait_trucks)
+    acrossed_bridge_lst = []
     cnt = 0
+    cnt_lst = []
+    for truck in wait_trucks:
+        cnt_lst.append([0,truck])
     # weight check list
-    wc_lst = deque()
-    while cnt <= bridge_length or truck_weights:
-        if sum(wc_lst) <= weight:
-            cnt += 1
-            if truck_weights:
-                pl = truck_weights.popleft()
-                if sum(wc_lst) + pl <= weight:
-                    wc_lst.append(pl)
+    onbridge_lst = deque()
+    while len(acrossed_bridge_lst) != trucks:
+        cnt_lst[cnt][0] += 1
+        if wait_trucks:
+            truck_weight = wait_trucks.popleft()
+            if sum(onbridge_lst) <= weight:
+                onbridge_lst.append(truck_weight)
+                if sum(onbridge_lst) > weight:
+                    overweigted_truck = onbridge_lst.pop()
+                    wait_trucks.insert(0,overweigted_truck)
                 else:
-                    truck_weights.insert(0,pl)
-        if cnt % bridge_length == 0:
-            poped = wc_lst.popleft()
-            across_bridge.append(poped)
-            if not truck_weights and not wc_lst:
-                break
-    return cnt + 1
+                    cnt_lst[cnt + 1][0] += 1
+            if cnt_lst[cnt][0] == bridge_length:
+                acrossed_truck = onbridge_lst.popleft()
+                acrossed_bridge_lst.append(acrossed_truck)
+                cnt += 1
+        else:
+            acrossed_truck = onbridge_lst.popleft()
+            acrossed_bridge_lst.append(acrossed_truck)
 
-# print(solution(2,10,[7,4,5,6]))
+
+
+
+
+
+print(solution(2,10,[7,4,5,6]))
 # print(solution(100,100,[10]))
-print(solution(10,100,[10,10,10,10,10,10,10,10,10]))
+# print(solution(100,100,[10,10,10,10,10,10,10,10,10]))
