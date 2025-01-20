@@ -32,6 +32,30 @@ usbipd attach --wsl --busid <busid>
 sdkmanager
 ```
 ![alt text](image-5.png)
+... WSL2 방식은 USB 연결이 계속 끊기는 문제가 발생해서 폐기
+
+## docker 활용 sdkmanager 접근
+- 22.04 docker image 다운, 다운 폴더로 이동 후 진행
+```docker
+docker load -i ./sdkmanager-2.2.0.12028-Ubuntu_22.04_docker.tar.gz
+```
+- docker sdkmanager image에 tag 달아주기
+```docker
+docker tag sdkmanager:2.2.0.12028-Ubuntu_22.04 sdkmanager:latest
+```
+- 호스트pc와 usb포트 매핑
+```docker
+docker run -it --rm --privileged \
+  -v /dev/bus/usb:/dev/bus/usb/ \
+  -v /dev:/dev \
+  -v /media/$USER:/media/nvidia:slave \
+  --network host \
+  sdkmanager:latest --cli
+```
+- docker sdkmanager cli 모드로 다운 시작
+```docker
+docker run -it --rm sdkmanager --cli
+```
 
 ## SSH를 통한 원격 GUI 접근(Nomachine)
 
