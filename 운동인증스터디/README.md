@@ -349,5 +349,5 @@
 |목요일|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|
 |금요일|:muscle:|:pray:|:muscle:|:pray:|:pray:|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|
 |토요일|:pray:|:muscle:|:muscle:|:muscle:|:pray:|:muscle:|:muscle:|:pray:|:pray:|:muscle:|:pray:|:muscle:|:pray:|
-|일요일|:muscle:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|:pray:|
-|달성여부|달성!|달성!|달성!|**2회 미달**|**2회 미달**|**1회 미달**|달성!|**2회 미달**|**1회 미달**|**1회 미달**|휴식중|**1회 미달**|**2회 미달**|
+|일요일|:muscle:|:pray:|:pray:|:pray:|:pray:|:muscle:|:muscle:|:pray:|:pray:|:muscle:|:pray:|:muscle:|:muscle:|
+|달성여부|달성!|달성!|달성!|**2회 미달**|**2회 미달**|달성!|1회 초과 달성!|**2회 미달**|**1회 미달**|달성!|휴식중|달성!|**1회 미달**|
