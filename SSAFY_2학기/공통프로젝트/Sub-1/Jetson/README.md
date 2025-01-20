@@ -24,9 +24,9 @@ sudo update-alternatives --install /usr/local/bin/usbip usbip /usr/lib/linux-too
 usbipd list
 # 
 # id 확인 및 연결
-usbipd wsl attach --busid <busid>
+usbipd attach --wsl --busid <busid>
 # ubuntu에서 연결 확인
-lsusb
+
 # 젯슨의 경우 APX의 ID 확인 후 연결
 # sdkmanager ubuntu 환경에서 실행
 sdkmanager
