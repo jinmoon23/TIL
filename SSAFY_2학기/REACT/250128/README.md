@@ -158,3 +158,5 @@ export default CourseCard;
 
 ```
 ![Props 실습](image.png)
+
+## Hooks를 통한 동작 기반 이해하기
