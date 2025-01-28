@@ -160,3 +160,13 @@ export default CourseCard;
 ![Props 실습](image.png)
 
 ## Hooks를 통한 동작 기반 이해하기
+- useEffect(vue3의 `watch`와 유사)
+```
+  //  useEffect: 컴포넌트가 렌더링 될 때, 특정 작업을 실행
+  //  - 인자
+  //    - 실행하고자 하는 함수 (effect callback)
+  //      - effect는 정리(clean-up) 함수를 반환할 수 있음
+  //      - 반환된 함수는 컴포넌트가 언마운트 또는 effect 재실행 이전에 실행됨
+  //    - 의존성 배열 (dependency list) -> 해당 value가 변할때 마다 재렌더링
+```
+
