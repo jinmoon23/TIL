@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  // 1. 고차함수 : 함수를 인자로 받거나 함수를 반환하는 함수
+  // 2. 아래의 함수는 함수를 반환하는 함수이다.
+  function greaterThan(n) {
+    return m => m > n
+  }
+  // 3. greaterThan10 변수에는 m => m > 10 함수가 할당됨
+  let greaterThan10 = greaterThan(10)
+  // 4. 아래에서 greaterThan10 함수에 11을 넘겨주면 11 > 10 이므로 true가 반환됨
+  console.log(greaterThan10(11))
+  // 고차함수는 자바스크립트에서 비동기적인 실행 맥락을 처리할 때 유용하다. 
+  // 왜? 함수를 인자로 받아서 실행하면 flow를 제어할 수 있기 때문이다.
+</script>
+</html>

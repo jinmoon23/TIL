@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  const colorLawn = {
+    title: '잔디',
+    color: "#00FF00",
+    rating: 0,
+  }
+  const rateColor = (color,rating) => {
+    return {
+      // 1. 스프레드 연산자에 의해 새로운 빈 객체가 생성됨
+      // 2. color(지금의 경우는 colorLawn)의 모든 속성이 새로운 빈 객체에 할당됨
+      // 3. color 객체에는 rating 속성도 있음.
+      ...color,
+      // 4. color 객체의 rating 속성의 값 0을 아래에서 호출될 때 파라미터로 넘겨준 5로 덮어씀
+      rating
+    } 
+  }
+  console.log(rateColor(colorLawn,5))
+  // 5. 원본을 복사하여 활용했기 때문에 원본 데이터는 불변함.
+  console.log(colorLawn.rating)
+
+  // 6. 참고할 점. 함수형 프로그래밍으로 데이터의 불변성을 유지하기 위해선
+  // 원본은 그대로 두고 복사하여 조작하는 방식을 채택해야 한다. 
+  // 대표적으로 객체에 대해 Object.assign / 스프레드 연산자를 활용하는 방법이 있다.
+</script>
+</html>
