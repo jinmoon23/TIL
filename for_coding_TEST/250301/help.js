@@ -18,8 +18,11 @@ function solution(name) {
       j++;
     }
     
-    // 현재 위치까지 이동한 비용  +  되돌아가는 비용  +  나머지 처리 비용
-    horizontal = Math.min(horizontal, i + i + n - j);
+    // (a) 오른쪽으로 i번 이동 후, 다시 왼쪽으로 돌아가 남은 구간(n - j)을 이동
+    // (b) 오른쪽으로 i번 이동 후, 남은 구간(n - j)까지 바로 이동 (즉, 왼쪽 이동을 먼저 해서 처리)
+    // 예를 들어, 가운데에 연속된 'A'가 많아서 어느 한쪽 끝만 바꿔주면 되는 경우,
+    // 두 번째 경우 (i + 2·(n - j))가 더 적은 이동 비용을 줄 수 있습니다.
+    horizontal = Math.min(horizontal, i + i + n - j, i + 2 * (n-j));
   }
   
   return totalMoves + horizontal;
