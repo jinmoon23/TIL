@@ -209,5 +209,3 @@ class Derived extends Base {
 const derived = new Derived('Choi')
 console.log(derived.sayHi()) // Hi! Choi. how are you doing?
 ```
-
-## 상속 클래스의 인스턴스 생성 과정
