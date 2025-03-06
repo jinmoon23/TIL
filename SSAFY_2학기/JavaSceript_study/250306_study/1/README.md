@@ -95,3 +95,19 @@ function removeAll(array, item) {
 }
 console.log(removeAll(arr,2))
 ```
+
+## Array.prototype.slice
+- 인자로 전달된 범위의 요소들을 복사하여 배열로 반환한다. 원본 배열은 변경되지 않는다. 
+- 인자를 모두 생략하면 원본 배열의 복사본을 생성하여 반환한다.
+```js
+const arr = [1,2,3]
+
+const copy = arr.slice()
+
+console.log(copy) // [1,2,3]
+
+console.log(copy === arr) // false
+
+console.log(arr[0] === copy[0]) // true
+```
+- 위 코드에서 arr와 copy는 다른 객체다. 하지만 내부 요소의 값에 대한 참조는 동일하다.
