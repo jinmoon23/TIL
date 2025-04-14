@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+  <section>
+    <!-- 아래에 새로운 card 생성 및 추가 -->
+    <article>
+      <div>
+        <h5></h5>
+        <p></p>
+      </div>
+    </article>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script>
+    // 1. article 선택 및 card 클래스 부여
+    const articleTag = document.querySelector('article')
+    articleTag.classList.add('card')
+    articleTag.style.width = '18rem'
+    console.log(articleTag)
+    // 2. articleTag 내부에 div 태그 선택 및 클래스 부여
+    const divTag = document.querySelector('div')
+    divTag.classList.add('card-body')
+    console.log(divTag)
+    // 3. div 태그 내부에 2개의 태그 추가
+    const h5Tag = document.querySelector('h5')
+    h5Tag.classList.add('cart-title')
+    h5Tag.textContent = '카드 제목'
+    console.log(h5Tag)
+    
+    const pTag = document.querySelector('p')
+    pTag.classList.add('cart-text')
+    pTag.textContent = '카드 내용'
+    console.log(pTag)
+  </script>
+</body>
+</html>

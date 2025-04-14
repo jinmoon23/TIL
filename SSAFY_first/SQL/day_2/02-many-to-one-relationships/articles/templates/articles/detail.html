@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Detail</h1>
+  <h3>{{ article.pk }}번째 글</h3>
+  <p>작성자: {{article.user.username}}</p>
+  <hr>
+  <p>제목: {{ article.title }}</p>
+  <p>내용: {{ article.content }}</p>
+  <p>작성일: {{ article.created_at }}</p>
+  <p>수정일: {{ article.updated_at }}</p>
+  <hr>
+  {% if request.uset == article.user %}
+  <a href="{% url "articles:update" article.pk %}">수정</a><br>
+  <form action="{% url "articles:delete" article.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="삭제">
+  </form>
+  {% endif %}
+  <p>댓글 목록</p>
+  <ul>
+    {% for comment in comments %}
+    <li>
+      <p>작성자: {{comment.user.username}} | {{comment.content}}</p>
+      {% if request.user == comment.user %}
+      <form action="{% url "articles:comment_delete" article.pk comment.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="삭제">
+      </form>
+      {% endif %}
+    </li>
+    {% empty %}
+    <p>댓글이 없어용~~</p>
+    {% endfor %}
+  </ul>
+  <p>댓글 작성</p>
+  <form action="{% url "articles:comment_create" article.pk %}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="제출">
+  </form>
+  <a href="{% url "articles:index" %}">[back]</a>
+</body>
+</html>

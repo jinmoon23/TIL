@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  const fredrick = {
+    name: "fredrick douglas",
+    canRead: false,
+    canWrite: false
+  }
+  const selfEducate = (person) => {
+    return {
+      // 1. 아래의 스프레드연산자를 활용해 순수한 함수가 됨.
+      ...person,
+      canRead: true,
+      canWrite: true,
+    }
+  }
+  console.log(selfEducate(fredrick)) // true, true
+  console.log(fredrick) // false, false
+  // 2. 순수함수란?
+  // 파라미터를 하나 이상 받아야 한다.
+  // 값이나 다른 함수를 반환해야 한다.
+  // 사이드이펙트가 있어서는 안된다. 
+</script>
+</html>

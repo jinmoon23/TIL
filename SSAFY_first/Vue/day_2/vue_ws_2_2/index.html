@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h1>다양한 전시 정보</h1>
+    <hr>
+    <ul>
+      <li id="영어 제목">
+        <h3>한글 제목</h3>
+        <p>전시 정보 설명</p>
+        <hr>
+        <p>전시 위치</p>
+				<a href="전시장 링크">전시장 바로가기</a>
+        <hr>
+        <p>입장권 구매하기</p>
+        <div>
+          <span>인원 수 : {{personNumber}} 명 </span>
+          <button v-on:click="personCountUp">+</button>
+          <button @click="personCountDown">-</button>
+        </div>
+        <p>총 입장료 : {{total}} 원</p>
+        <hr>
+      </li>
+    </ul>
+  </div>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    // 1. app 인스턴스 생성
+    const {createApp, ref} = Vue
+    const app = createApp({
+      setup() {
+        const personNumber = ref(0)
+        const total = ref(0)
+        // 3. value에 접근하지 않으면 변하지 않음!! ref 객체라는 사실을 다시 깨닫자~~ 
+        const personCountUp = function () {
+          personNumber.value += 1
+          total.value = personNumber.value * 1000
+        }
+        const personCountDown = function () {
+          personNumber.value -= 1
+          total.value = personNumber.value * 1000
+        }
+        return {
+          personNumber,
+          total,
+          personCountUp,
+          personCountDown,
+        }
+      }
+    })
+    // 2. 마운트
+    app.mount('#app')
+  </script>
+</body>
+</html>
